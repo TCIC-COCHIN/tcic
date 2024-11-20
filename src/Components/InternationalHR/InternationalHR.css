@@ -1,0 +1,114 @@
+.international-hr-page {
+    display: flex;
+    justify-content: space-between;
+    max-width: 90%;
+    margin: 80px auto;
+    gap: 20px;
+    position: relative; /* Required for the background overlay */
+    padding: 20px;
+    color: #000; /* Ensure contrast against background */
+}
+
+/* Background Image */
+.international-hr-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/src/assets/images/hr.jpg') no-repeat center center/cover;
+    opacity: 0.3; /* Adjust this for the desired opacity level */
+    z-index: -1; /* Places it behind the content */
+}
+
+/* Programme Details */
+.programme-details {
+    flex: 1;
+    color: #060606;
+    z-index: 1; /* Ensures content is above the background */
+}
+
+.programme-details h2 {
+    color: #000f38;
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.programme-details p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+.programme-details ul {
+    list-style: disc;
+    margin-left: 20px;
+    padding-left: 10px;
+}
+
+.programme-details ul li {
+    margin: 10px 0;
+    line-height: 1.4;
+}
+
+/* Programme Form */
+.programme-form {
+    flex: 1;
+    padding: 20px;
+    background: rgba(249, 249, 249, 0.9); /* Slight transparency for form background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1; /* Ensures content is above the background */
+}
+
+.programme-form h3 {
+    color: #000f38;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.programme-form form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.programme-form form input,
+.programme-form form select,
+.programme-form form button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+}
+
+.programme-form form input:focus,
+.programme-form form select:focus {
+    border-color: #5c67f2;
+    box-shadow: 0 0 5px rgba(92, 103, 242, 0.5);
+}
+
+.programme-form form button {
+    background-color: #000f38;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.programme-form form button:hover {
+    background-color: #5c67f2;
+}
+
+.programme-form span {
+    display: block;
+    margin-top: 10px;
+    color: green;
+    font-size: 14px;
+}

@@ -1,0 +1,103 @@
+/* General Page Styling */
+.social-media-promotion-page {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+  }
+  
+  /* Header Section */
+  .promotion-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .promotion-header h1 {
+    font-size: 36px;
+    color: #000f38;
+    margin-bottom: 10px;
+  }
+  
+  .promotion-header p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  /* Services Section */
+  .promotion-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Promotion Card */
+  .promotion-card {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .promotion-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .promotion-card h2 {
+    font-size: 24px;
+    color: #000f38;
+    margin-bottom: 15px;
+  }
+  
+  .promotion-card p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .promotion-header h1 {
+      font-size: 28px;
+    }
+  
+    .promotion-header p {
+      font-size: 16px;
+    }
+  
+    .promotion-card h2 {
+      font-size: 20px;
+    }
+  
+    .promotion-card p {
+      font-size: 14px;
+    }
+  }
+  
+  /* Contact Us Section */
+  .contact-us-section {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .contact-us-button {
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #000f38;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .contact-us-button:hover {
+    background-color: #383a58;
+    transform: scale(1.05);
+  }
+  

@@ -1,0 +1,124 @@
+nav {
+    width: 100%;
+    background: #150247;
+    color: #fff;
+    padding: 4px 3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+.logo {
+    width: 180px;
+}
+
+nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    position: relative; /* Required for dropdown positioning */
+    display: inline-block;
+    list-style: none;
+    margin: 5px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Dropdown menu styles */
+nav ul li .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Align dropdown under the parent */
+    left: 0;
+    background: #fff;
+    color: #270778;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    z-index: 1000;
+    min-width: 200px;
+}
+
+nav ul li .dropdown-menu li {
+    padding: 8px 20px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+nav ul li .dropdown-menu li:hover {
+    background: #270778;
+    color: #fff;
+}
+
+/* Show dropdown on hover */
+nav ul li:hover .dropdown-menu {
+    display: block;
+}
+
+/* Button styles */
+nav ul li .btn {
+    background-color: #fff;
+    color: #150247;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+nav ul li .btn:hover {
+    background-color: #78b3f1;
+}
+.dark-nav{
+    background: #070e4b;
+    transition: 0.5s;
+
+}
+
+/*  -------Media Query--------*/
+
+@media (max-width: 1000px){
+    .logo{
+        width: 140px;
+
+    }
+    nav ul li{
+        margin:10px 15px;
+        
+    }
+}
+@media (max-width: 840px){
+nav{
+    padding:15px 0 ;
+}
+nav ul{
+   position: fixed; 
+   top: 0;
+   right:0 ;
+   bottom: 0;
+   background: #070e4b;
+   z-index: -1;
+   width: 200px;
+   padding-top: 70px;
+   transition: 0.5s;
+}
+nav ul li{
+    display: block;
+    margin: 25px 40px;
+    
+}
+
+
+}
+
+
+
+
