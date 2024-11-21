@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './InternationalHR.css';
 
-const InternationalHR = () => {
+const InternationalHr = () => {
     const [result, setResult] = useState("");
 
     const onSubmit = async (event) => {
@@ -64,4 +64,4 @@ const InternationalHR = () => {
     );
 };
 
-export default InternationalHR;
+export default InternationalHr;
