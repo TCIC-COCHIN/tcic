@@ -7,6 +7,7 @@
     position: relative; /* Required for the background overlay */
     padding: 20px;
     color: #000; /* Ensure contrast against background */
+    flex-wrap: wrap; /* Allow elements to wrap on smaller screens */
 }
 
 /* Background Image */
@@ -17,7 +18,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('/src/assets//images/mernstack.webp') no-repeat center center/cover;
+    background: url('/src/assets/images/mernstack.webp') no-repeat center center/cover;
     opacity: 0.3; /* Adjust this for the desired opacity level */
     z-index: -1; /* Places it behind the content */
 }
@@ -27,6 +28,7 @@
     flex: 1;
     color: #060606;
     z-index: 1; /* Ensures content is above the background */
+    margin-right: 20px; /* Adds space between columns */
 }
 
 .programme-details h2 {
@@ -111,4 +113,63 @@
     margin-top: 10px;
     color: green;
     font-size: 14px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .fullstack-development-page {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .programme-details,
+    .programme-form {
+        flex: 1;
+        width: 100%;
+    }
+    .programme-details h2 {
+        font-size: 24px;
+    }
+    .programme-form h3 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .programme-details h2 {
+        font-size: 20px;
+    }
+    .programme-details p {
+        font-size: 14px;
+    }
+    .programme-details ul li {
+        font-size: 14px;
+    }
+    .programme-form form input,
+    .programme-form form select,
+    .programme-form form button {
+        padding: 10px;
+    }
+    .programme-form h3 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .fullstack-development-page {
+        padding: 10px;
+    }
+    .programme-details h2 {
+        font-size: 18px;
+    }
+    .programme-details p {
+        font-size: 12px;
+    }
+    .programme-form h3 {
+        font-size: 16px;
+    }
+    .programme-form form input,
+    .programme-form form select,
+    .programme-form form button {
+        padding: 8px;
+    }
 }

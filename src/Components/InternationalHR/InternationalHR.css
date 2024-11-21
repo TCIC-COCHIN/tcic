@@ -7,6 +7,7 @@
     position: relative; /* Required for the background overlay */
     padding: 20px;
     color: #000; /* Ensure contrast against background */
+    flex-wrap: wrap; /* Allows the content to wrap on smaller screens */
 }
 
 /* Background Image */
@@ -27,6 +28,7 @@
     flex: 1;
     color: #060606;
     z-index: 1; /* Ensures content is above the background */
+    margin-bottom: 20px;
 }
 
 .programme-details h2 {
@@ -61,6 +63,7 @@
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1; /* Ensures content is above the background */
+    margin-bottom: 20px;
 }
 
 .programme-form h3 {
@@ -111,4 +114,72 @@
     margin-top: 10px;
     color: green;
     font-size: 14px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For small devices like mobile (less than 600px) */
+@media (max-width: 600px) {
+    .international-hr-page {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .programme-details, .programme-form {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .programme-details h2 {
+        font-size: 22px;
+    }
+
+    .programme-details p, .programme-details ul {
+        max-width: 100%;
+        font-size: 14px;
+    }
+
+    .programme-form h3 {
+        font-size: 20px;
+    }
+
+    .programme-form form button {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+/* For tablets (600px to 768px) */
+@media (max-width: 768px) {
+    .programme-details h2 {
+        font-size: 24px;
+    }
+
+    .programme-details p {
+        font-size: 16px;
+    }
+
+    .programme-form h3 {
+        font-size: 22px;
+    }
+}
+
+/* For large screens (desktops and beyond) */
+@media (min-width: 1024px) {
+    .international-hr-page {
+        max-width: 1200px;
+    }
+
+    .programme-details h2 {
+        font-size: 30px;
+    }
+
+    .programme-form h3 {
+        font-size: 26px;
+    }
+
+    .programme-form form button {
+        padding: 14px;
+        font-size: 16px;
+    }
 }

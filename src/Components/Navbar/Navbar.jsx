@@ -6,6 +6,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false); // State for toggling menu
   const location = useLocation();
 
   useEffect(() => {
@@ -17,7 +18,12 @@ const Navbar = () => {
   return (
     <nav className={`container ${sticky ? 'dark-nav' : ''}`}>
       <img src={logo} alt="Logo" className="logo" />
-      <ul className="navbar">
+      <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul className={`navbar ${menuOpen ? 'active' : ''}`}>
         {/* Home */}
         <li>
           {location.pathname === '/' ? (

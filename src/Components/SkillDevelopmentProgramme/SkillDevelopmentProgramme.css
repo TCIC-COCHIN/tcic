@@ -1,12 +1,15 @@
+/* Skill Development Page */
 .skill-development-page {
     display: flex;
     justify-content: space-between;
     max-width: 90%;
     margin: 80px auto;
     gap: 20px;
-    position: relative; /* Required for the background overlay */
+    position: relative;
     padding: 20px;
-    color: #000; /* Ensure contrast against background */
+    color: #000;
+    flex-wrap: wrap;
+    z-index: 1; /* Ensure content appears above the background */
 }
 
 /* Background Image */
@@ -18,8 +21,8 @@
     width: 100%;
     height: 100%;
     background: url('/src/assets/images/skill.jpg') no-repeat center center/cover;
-    opacity: 0.3; /* Adjust this for the desired opacity level */
-    z-index: -1; /* Places it behind the content */
+    opacity: 0.7; /* Adjust opacity for better visibility */
+    z-index: -1; /* Place it behind the content */
 }
 
 /* Programme Details */
@@ -30,10 +33,11 @@
 }
 
 .programme-details h2 {
-    color: #000f38;
+    color: #fff; /* White color for better contrast */
     font-size: 28px;
     font-weight: 500;
     margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Add text shadow for better visibility */
 }
 
 .programme-details p {
@@ -111,4 +115,50 @@
     margin-top: 10px;
     color: green;
     font-size: 14px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .skill-development-page {
+        flex-direction: column;
+        gap: 30px;
+        margin: 20px;
+    }
+
+    .programme-details,
+    .programme-form {
+        flex: none;
+        width: 100%;
+    }
+
+    .programme-details h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .programme-form h3 {
+        font-size: 20px;
+    }
+
+    .programme-form form input,
+    .programme-form form select,
+    .programme-form form button {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .programme-details h2 {
+        font-size: 20px;
+    }
+
+    .programme-form h3 {
+        font-size: 18px;
+    }
+
+    .programme-form form input,
+    .programme-form form select,
+    .programme-form form button {
+        padding: 8px;
+    }
 }

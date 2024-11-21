@@ -5,35 +5,34 @@ import mail_icon from '../../assets/images/mail-icon.png';
 import phone_icon from '../../assets/images/phone-icon.png';
 import location_icon from '../../assets/images/location-icon.png';
 import white_arrow from '../../assets/images/white-arrow.png';
+import emailjs from 'emailjs-com';
+
 
 const Contact = () => {
   const [result, setResult] = React.useState("");
 
-  const onSubmit = async (event) => {
+  const onSubmit = (event) => {
     event.preventDefault();
     setResult("Sending...");
-    try {
-      const formData = new FormData(event.target);
-      formData.append("access_key", "b87c59ad-9a7f-48e4-8044-50bfcddfa681");
+    const form = event.target; // Get the HTML form element
   
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData,
-      });
-  
-      if (!response.ok) throw new Error(`Error: ${response.statusText}`);
-      const data = await response.json();
-  
-      if (data.success) {
-        setResult("Form Submitted Successfully");
-        event.target.reset();
-      } else {
-        setResult(data.message || "Submission failed");
-      }
-    } catch (error) {
-      console.error("Submission Error:", error);
-      setResult("There was an error submitting the form. Please try again.");
-    }
+    emailjs
+      .sendForm(
+        'service_2uev33k',    // Replace with your EmailJS service ID
+        'template_ahl8aca',   // Replace with your EmailJS template ID
+        form,                 // Pass the form element here
+        'gcIwoM69MGyBw53E4'   // Replace with your EmailJS user ID
+      )
+      .then(
+        (result) => {
+          setResult("Form Submitted Successfully");
+          form.reset(); // Reset the form after successful submission
+        },
+        (error) => {
+          console.error("Submission Error:", error);
+          setResult("There was an error submitting the form. Please try again.");
+        }
+      );
   };
   
 
@@ -75,12 +74,12 @@ const Contact = () => {
       <div className='contact-col'>
         <form onSubmit={onSubmit}>
           <label>Your name</label>
-          <input type="text" name='name' placeholder='Enter your name' required />
+          <input type="text" name="from_name" placeholder="Enter your name" required />
           <label>Phone Number</label>
-          <input type="tel" name='phone' placeholder='Enter your Contact Number' required />
+          <input type="tel" name="phone" placeholder="Enter your Contact Number" required />
           <label>Write your messages</label>
-          <textarea name="message" rows="6" placeholder='Enter your message' required></textarea>
-          <button type='submit' className='btn dark-btn'>Submit now <img src={white_arrow} alt="" /></button>
+          <textarea name="message" rows="6" placeholder="Enter your message" required></textarea>
+          <button type="submit" className="btn dark-btn">Submit now <img src={white_arrow} alt="" /></button>
         </form>
         <span>{result}</span>
       </div>

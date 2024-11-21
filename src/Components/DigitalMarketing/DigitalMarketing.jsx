@@ -60,7 +60,7 @@ const DigitalMarketing = () => {
                     <select name="programme" required>
                     <option value="">Choose...</option>
                     <option value="Full Stack Development">Full Stack Development</option>
-                        <option value="Digital Marketing">Digital Marketing</option>
+                        <option value="Digital Marketing">Premium Digital Marketing</option>
                         <option value="International HR">International HR</option>
                     </select>
 

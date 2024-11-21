@@ -60,6 +60,24 @@
   }
   
   /* Responsive Styling */
+  @media (max-width: 1024px) {
+    .logo-header h1 {
+      font-size: 32px;
+    }
+  
+    .logo-header p {
+      font-size: 17px;
+    }
+  
+    .logo-card h2 {
+      font-size: 22px;
+    }
+  
+    .logo-card p {
+      font-size: 15px;
+    }
+  }
+  
   @media (max-width: 768px) {
     .logo-header h1 {
       font-size: 28px;
@@ -100,4 +118,3 @@
     background-color: #383a58;
     transform: scale(1.05);
   }
-  

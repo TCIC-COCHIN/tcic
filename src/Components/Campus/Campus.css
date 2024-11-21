@@ -1,17 +1,73 @@
-.campus{
+/* General Styling */
+.campus {
     margin: 80px auto;
     width: 90%;
     text-align: center;
-
 }
-.gallery{
+
+.gallery {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 40px;
-
+    flex-wrap: wrap; /* Allow images to wrap when screen size is smaller */
 }
-.gallery img{
+
+.gallery img {
     width: 23%;
-    border-radius:10px ;
+    border-radius: 10px;
+    margin-bottom: 20px; /* Adds spacing between images */
+}
+
+/* Responsive Design for Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .gallery img {
+        width: 45%; /* Each image takes up 45% of the container width on tablets */
+    }
+}
+
+/* Responsive Design for Mobile Screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .gallery img {
+        width: 100%; /* Each image takes up 100% of the container width on mobile */
+        margin-bottom: 15px; /* Adjust spacing between images */
+    }
+
+    .campus {
+        width: 100%; /* Ensure the campus container uses full width on mobile */
+        margin: 40px auto; /* Reduce margin on smaller screens */
+    }
+}
+
+/* Styling for Button */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #070e4b;
+    color: #fff;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn img {
+    width: 20px;
+    margin-left: 10px;
+}
+
+/* Responsive Button on Small Screens */
+@media (max-width: 768px) {
+    .btn {
+        font-size: 14px; /* Reduce font size for better readability on small screens */
+        padding: 10px 20px; /* Adjust padding for the button */
+    }
+
+    .btn img {
+        width: 18px; /* Adjust icon size */
+    }
 }

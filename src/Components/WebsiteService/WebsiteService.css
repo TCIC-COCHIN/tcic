@@ -5,86 +5,67 @@
     padding: 20px;
     font-family: 'Arial', sans-serif;
     color: #333;
-  }
-  
-  /* Header Section */
-  .service-header {
+}
+
+/* Header Section */
+.service-header {
     text-align: center;
     margin-bottom: 40px;
-  }
-  
-  .service-header h1 {
+}
+
+.service-header h1 {
     font-size: 36px;
     color: #000f38;
     margin-bottom: 10px;
-  }
-  
-  .service-header p {
+}
+
+.service-header p {
     font-size: 18px;
     line-height: 1.6;
     color: #555;
-  }
-  
-  /* Services Section */
-  .service-details {
+}
+
+/* Services Section */
+.service-details {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-  }
-  
-  /* Service Card */
-  .service-card {
+}
+
+/* Service Card */
+.service-card {
     background: #f9f9f9;
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  .service-card:hover {
+}
+
+.service-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  }
-  
-  .service-card h2 {
+}
+
+.service-card h2 {
     font-size: 24px;
     color: #000f38;
     margin-bottom: 15px;
-  }
-  
-  .service-card p {
+}
+
+.service-card p {
     font-size: 16px;
     line-height: 1.5;
     color: #666;
-  }
-  
-  /* Responsive Styling */
-  @media (max-width: 768px) {
-    .service-header h1 {
-      font-size: 28px;
-    }
-  
-    .service-header p {
-      font-size: 16px;
-    }
-  
-    .service-card h2 {
-      font-size: 20px;
-    }
-  
-    .service-card p {
-      font-size: 14px;
-    }
-  }
+}
 
-  /* Contact Us Section */
+/* Contact Us Section */
 .contact-us-section {
     text-align: center;
     margin-top: 40px;
-  }
-  
-  .contact-us-button {
+}
+
+.contact-us-button {
     padding: 15px 30px;
     font-size: 16px;
     font-weight: bold;
@@ -94,12 +75,80 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
-  }
-  
-  .contact-us-button:hover {
-   
+}
+
+.contact-us-button:hover {
     background-color: #383a58;
     transform: scale(1.05);
-  }
-  
-  
+}
+
+/* Responsive Styling */
+@media (max-width: 1024px) {
+    .service-header h1 {
+        font-size: 32px;
+    }
+
+    .service-header p {
+        font-size: 16px;
+    }
+
+    .service-card h2 {
+        font-size: 22px;
+    }
+
+    .service-card p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-header h1 {
+        font-size: 28px;
+    }
+
+    .service-header p {
+        font-size: 16px;
+    }
+
+    .service-card h2 {
+        font-size: 20px;
+    }
+
+    .service-card p {
+        font-size: 14px;
+    }
+
+    .contact-us-button {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-header h1 {
+        font-size: 24px;
+    }
+
+    .service-header p {
+        font-size: 14px;
+    }
+
+    .service-card h2 {
+        font-size: 18px;
+    }
+
+    .service-card p {
+        font-size: 12px;
+    }
+
+    .contact-us-button {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+
+    /* Stack the cards in a single column */
+    .service-details {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
