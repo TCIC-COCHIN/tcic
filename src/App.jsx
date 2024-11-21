@@ -12,7 +12,6 @@ import Footer from './Components/Footer/Footer';
 import Careers from './Components/Careers/Careers';
 import FullStackDevelopment from './Components/FullStackDevelopment/FullStackDevelopment'; // Import the component
 import DigitalMarketing from './Components/DigitalMarketing/DigitalMarketing';
-import InternationalHR from './Components/InternationalHR/InternationalHr';
 import SkillDevelopmentProgramme from './Components/SkillDevelopmentProgramme/SkillDevelopmentProgramme';
 import GalleryView from './Components/GalleryView/GalleryView';
 import WebsiteService from './Components/WebsiteService/WebsiteService';
@@ -23,6 +22,8 @@ import ContentMarketing from './Components/ContentMarketing/ContentMarketing';
 import EmailMarketing from './Components/EmailMarketing/EmailMarketing';
 import ProfessionalITConsultants from './Components/ProfessionalITConsultants/ProfessionalITConsultants';
 import DigitalMarketingService from './Components/DigitalMarketingService/DigitalMarketingService';
+import InternationalHr from './Components/InternationalHR/InternationalHr';
+
 
 const App = () => {
   return (
@@ -55,7 +56,7 @@ const App = () => {
         {/* Full Stack Development Page */}
         <Route path="/fullstack-development" element={<FullStackDevelopment />} />
         <Route path="/digitalMarketing" element={<DigitalMarketing />} />
-        <Route path="/internationalHr" element={<InternationalHR/>} />
+        <Route path="/internationalHr" element={<InternationalHr/>} />
         <Route path="/skillDevelopment" element={<SkillDevelopmentProgramme/>} />
         <Route path="/galleryView" element={<GalleryView/>} />
         <Route path="/websiteService" element={<WebsiteService/>} />
