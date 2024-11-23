@@ -54,7 +54,7 @@ const Contact = () => {
             opp. Bharata Mata College,
             Near Chittilappilly Square,
             <br />
-            Thrikkakara, Kochi
+            Thrikkakara, Kochi-682021
           </li>
         </ul>
         {/* Embed the Google Map iframe here */}

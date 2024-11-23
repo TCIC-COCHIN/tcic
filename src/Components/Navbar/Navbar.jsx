@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Navbar.css';
-import logo from '../../assets/images/log.png';
+import logo from '../../assets/images/logotrans.png';
 import { Link as ScrollLink } from 'react-scroll';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -74,7 +74,7 @@ const Navbar = () => {
           <ul className="dropdown-menu">
             <li><Link to="/websiteService">Website Designing, Developing & Handling</Link></li>
             <li><Link to="/posterDesigning">Creative Poster Designing</Link></li>
-            <li><Link to="/posterDesigning">Innovative Logo Designing</Link></li>
+            <li><Link to="/logoDesigning">Innovative Logo Designing</Link></li>
             <li><Link to="/socialMediaPromotion">Social Media Promotion</Link></li>
             <li><Link to="/seoPromotion">SEO Promotions</Link></li>
             <li><Link to="/contentMarketing"> Informative Content Creation & Marketing</Link></li>

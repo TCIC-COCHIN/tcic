@@ -23,6 +23,7 @@ import EmailMarketing from './Components/EmailMarketing/EmailMarketing';
 import ProfessionalITConsultants from './Components/ProfessionalITConsultants/ProfessionalITConsultants';
 import DigitalMarketingService from './Components/DigitalMarketingService/DigitalMarketingService';
 import InternationalHr from './Components/InternationalHR/InternationalHr';
+import InnovativeLogoDesigning from './Components/InnovativeLogoDesigning/InnovativeLogoDesigning';
 
 
 const App = () => {
@@ -62,7 +63,7 @@ const App = () => {
         <Route path="/websiteService" element={<WebsiteService/>} />
         <Route path="/contact" element={<Contact/>} />
         <Route path="/posterDesigning" element={<CreativePosterDesigning/>} />
-        <Route path="/logoDesigning" element={<CreativePosterDesigning/>} />
+        <Route path="/logoDesigning" element={<InnovativeLogoDesigning/>} />
         <Route path="/socialMediaPromotion" element={<SocialMediaPromotion/>} />
         <Route path="/seoPromotion" element={<SEOPromotions/>} />
         <Route path="/contentMarketing" element={<ContentMarketing/>} />
