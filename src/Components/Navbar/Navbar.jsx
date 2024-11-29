@@ -55,7 +55,7 @@ const Navbar = () => {
 
         {/* Programmes Dropdown */}
         <li className={`dropdown ${sidebarSubmenu === 'programmes' ? 'active' : ''}`}>
-  <span onClick={() => toggleSidebarSubmenu('programmes')}>Programmes</span>
+  <span onClick={() => toggleSidebarSubmenu('programmes')}>Program</span>
   {sidebarSubmenu === 'programmes' && (
     <ul className="dropdown-menu">
       <li>
@@ -65,7 +65,7 @@ const Navbar = () => {
       </li>
       <li>
         <Link to="/digitalMarketing" onClick={() => setMenuOpen(false)}>
-          Premium Digital Marketing (All in One)
+          Premium Digital Marketing
         </Link>
       </li>
       <li>
@@ -75,10 +75,11 @@ const Navbar = () => {
       </li>
       <li>
         <Link to="/skillDevelopment" onClick={() => setMenuOpen(false)}>
-          Skill Development Programme
+          Skill Development Program
         </Link>
       </li>
-      <li><Link to="/event">Events</Link></li>
+      <li><Link to="/event" onClick={() => setMenuOpen(false)}>Events</Link></li>
+      <li><Link to="/news" onClick={() => setMenuOpen(false)}>News</Link></li>
 
     </ul>
   )}
@@ -124,6 +125,11 @@ const Navbar = () => {
           SEO Promotions
         </Link>
       </li>
+      <li><Link to="/contentMarketing" onClick={() => setMenuOpen(false)}> Informative Content Creation & Marketing</Link></li>
+            <li><Link to="/emailMarketing" onClick={() => setMenuOpen(false)}>Email Marketing</Link></li>
+            <li><Link to="/itConsulting" onClick={() => setMenuOpen(false)}>Professional IT Consultants</Link></li>
+            <li><Link to="/digitalMarketingService" onClick={() => setMenuOpen(false)}>Digital Marketing</Link></li>
+
     </ul>
   )}
 </li>
@@ -161,31 +167,40 @@ const Navbar = () => {
 
           {/* Programmes Dropdown */}
           <li className={`dropdown ${sidebarSubmenu === 'programmes' ? 'active' : ''}`}>
-            <span onClick={() => toggleSidebarSubmenu('programmes')}>Programmes</span>
+            <span onClick={() => toggleSidebarSubmenu('programmes')}>Programs  ↓ </span>
             {sidebarSubmenu === 'programmes' && (
               <ul className="dropdown-menu">
                 <li><Link to="/fullstack-development" onClick={() => setMenuOpen(false)}>Full Stack Development</Link></li>
-                <li><Link to="/digitalMarketing" onClick={() => setMenuOpen(false)}>Premium Digital Marketing (All in One)</Link></li>
+                <li><Link to="/digitalMarketing" onClick={() => setMenuOpen(false)}>Premium Digital Marketing </Link></li>
                 <li><Link to="/internationalHr" onClick={() => setMenuOpen(false)}>International HR</Link></li>
                 <li><Link to="/skillDevelopment" onClick={() => setMenuOpen(false)}>Skill Development Programme</Link></li>
                 <li><Link to="/event"onClick={() => setMenuOpen(false)}>Events</Link></li>
+                <li><Link to="/news" onClick={() => setMenuOpen(false)}>News</Link></li>
               </ul>
             )}
           </li>
 
           {/* Services Dropdown */}
           <li className={`dropdown ${sidebarSubmenu === 'services' ? 'active' : ''}`}>
-            <span onClick={() => toggleSidebarSubmenu('services')}>Services</span>
+            <span onClick={() => toggleSidebarSubmenu('services')}>Services  ↓ </span>
             {sidebarSubmenu === 'services' && (
               <ul className="dropdown-menu">
-                <li><Link to="/websiteService" onClick={() => setMenuOpen(false)}>Website Designing, Developing & Handling</Link></li>
+                <li><Link to="/websiteService" onClick={() => setMenuOpen(false)}>Website Services</Link></li>
                 <li><Link to="/posterDesigning" onClick={() => setMenuOpen(false)}>Creative Poster Designing</Link></li>
                 <li><Link to="/logoDesigning" onClick={() => setMenuOpen(false)}>Innovative Logo Designing</Link></li>
                 <li><Link to="/socialMediaPromotion" onClick={() => setMenuOpen(false)}>Social Media Promotion</Link></li>
                 <li><Link to="/seoPromotion" onClick={() => setMenuOpen(false)}>SEO Promotions</Link></li>
+                <li><Link to="/contentMarketing" onClick={() => setMenuOpen(false)}>Content Creation & Marketing</Link></li>
+            <li><Link to="/emailMarketing" onClick={() => setMenuOpen(false)}>Email Marketing</Link></li>
+            <li><Link to="/itConsulting" onClick={() => setMenuOpen(false)}>Professional IT Consultants</Link></li>
+            <li><Link to="/digitalMarketingService" onClick={() => setMenuOpen(false)}>Digital Marketing</Link></li>
+
               </ul>
             )}
           </li>
+          <li><Link to="/event"onClick={() => setMenuOpen(false)}>Events</Link></li>
+                <li><Link to="/news" onClick={() => setMenuOpen(false)}>News</Link></li>
+                <Link to="/galleryview" onClick={() => setMenuOpen(false)}>Gallery</Link>
 
           <li>
             <Link to="/careers" onClick={() => setMenuOpen(false)}>Careers</Link>

@@ -43,9 +43,9 @@ const About = ({ setPlayState }) => {
       <div className="about-right" ref={aboutRightRef}>
         <h3>ABOUT TCIC</h3>
         <h2>This is your Moment to Connect, Innovate and Grow into Greatness</h2>
-        <p>
-        At TCIC, our mission is to empower professionals with industry-relevant skills and a global perspective, preparing them to excel in their careers and drive innovation worldwide. Our vision is to be a globally recognized center of excellence, fostering a new generation of leaders who inspire growth and lead with impact. Through cutting-edge training and practical experience, we equip our students to succeed in an ever-evolving world. Join us and turn your ambitions into achievements!
-        </p>
+        
+        <p>At TCIC, we are committed to transforming your dreams into a successful reality.No matter your field of study, our expertly designed employability training program equips you with the skills, knowledge, and confidence to secure the perfect job that aligns with your passion and goals. With a placement , we ensure you don’t just dream of a better future—you achieve it. Join TCIC today and step confidently into a career that aligns perfectly with your passion and ambition!
+        This is the right time and TCIC is the right place for you</p>
         
       
       </div>

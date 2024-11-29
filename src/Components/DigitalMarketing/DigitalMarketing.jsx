@@ -38,7 +38,7 @@ const DigitalMarketing = () => {
         <div className="digital-marketing-page">
             {/* Programme Details */}
             <div className="programme-details" data-aos="fade-up">
-                <h2>Digital Marketing Programme</h2>
+                <h2>Digital Marketing Program</h2>
                 <p>
                     Become a digital marketing expert with hands-on training in SEO, social media marketing, email marketing, and analytics. Our program equips you with the skills to run successful marketing campaigns in a competitive landscape.
                 </p>
@@ -63,7 +63,7 @@ const DigitalMarketing = () => {
                     <label>Contact Number</label>
                     <input type="tel" name="phone" placeholder="Enter your contact number" required />
 
-                    <label>Select Programme</label>
+                    <label>Select Program</label>
                     <select name="programme" required>
                         <option value="">Choose...</option>
                         <option value="Full Stack Development">Full Stack Development</option>

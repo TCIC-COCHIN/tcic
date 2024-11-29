@@ -61,7 +61,7 @@ const Footer = () => {
         {/* Middle Section */}
         <div className="footer-middle" data-aos="fade-up">
           <h3>QUICK LINKS</h3>
-          <ul className="navbar">
+          <ul className="footer-middle">
             <li>
               {location.pathname === '/' ? (
                 <ScrollLink to="hero" smooth={true} offset={0} duration={500}>
@@ -81,12 +81,12 @@ const Footer = () => {
               )}
             </li>
             <li>
-              {location.pathname === '/' ? (
+              {location.pathname === '/galleryView' ? (
                 <ScrollLink to="campus" smooth={true} offset={-260} duration={500}>
                   Gallery
                 </ScrollLink>
               ) : (
-                <Link to="/">Gallery</Link>
+                <Link to="/galleryView">Gallery</Link>
               )}
             </li>
             <li>
@@ -94,6 +94,9 @@ const Footer = () => {
             </li>
             <li>
               <Link to="/event">Events</Link>
+            </li>
+            <li>
+              <Link to="/news">News</Link>
             </li>
             <li>
               {location.pathname === '/' ? (

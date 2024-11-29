@@ -34,6 +34,7 @@ import LeadershipColleges from './Components/LeadershipColleges/LeadershipColleg
 import PositiveParenting from './Components/PositiveParenting/PositiveParenting';
 // import Animation from './Components/Animation/Animation';
 import HomeSkills from './Components/HomeSkills/HomeSkills';
+import News from './Components/News/News';
 
 
 
@@ -96,6 +97,7 @@ const App = () => {
         <Route path="/leadership-schools" element={<LeadershipSchools/>} />
         <Route path="/leadership-colleges" element={<LeadershipColleges/>} />
         <Route path="/positive-parenting" element={<PositiveParenting/>} />
+        <Route path="/news" element={<News/>} />
         
         
       </Routes>

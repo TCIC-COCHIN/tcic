@@ -41,9 +41,9 @@ const FullStackDevelopment = () => {
         <div className="fullstack-development-page">
             {/* Programme Details */}
             <div className="programme-details" data-aos="fade-up">
-                <h2>Full Stack Development Programme</h2>
+                <h2>Full Stack Development Program</h2>
                 <p>
-                    Become an expert in building web applications from scratch! Our Full Stack Development programme focuses on
+                    Become an expert in building web applications from scratch! Our Full Stack Development program focuses on
                     industry-demanded skills with hands-on projects using the MERN stack (MongoDB, Express.js, React.js, Node.js).
                 </p>
                 <ul>
@@ -67,7 +67,7 @@ const FullStackDevelopment = () => {
                     <label>Contact Number</label>
                     <input type="tel" name="phone" placeholder="Enter your contact number" required />
 
-                    <label>Select Programme</label>
+                    <label>Select Program</label>
                     <select name="programme" required>
                         <option value="">Choose...</option>
                         <option value="Full Stack Development">Full Stack Development</option>
