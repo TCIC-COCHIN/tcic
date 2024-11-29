@@ -1,5 +1,7 @@
 import React from 'react';
 import './Careers.css';
+
+
 import noJobsImage from '../../assets/images/JOB-CLOSED.png'; // Replace with the path to your default image
 
 const Careers = () => {

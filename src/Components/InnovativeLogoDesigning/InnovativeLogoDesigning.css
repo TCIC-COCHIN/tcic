@@ -34,11 +34,12 @@
   
   /* Logo Card */
   .logo-card {
-    background: #f9f9f9;
+    background: url('https://images.unsplash.com/photo-1714779573250-36242918e044?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTAzfHwzZCUyMGJsdWUlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww') no-repeat center center/cover; /* Replace this with your image */
     border-radius: 8px;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    color: #fff; /* White text */
+    box-shadow: 0 4px 8px rgba(190, 162, 162, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
   }
   
@@ -49,14 +50,14 @@
   
   .logo-card h2 {
     font-size: 24px;
-    color: #000f38;
+    color: #fff;
     margin-bottom: 15px;
   }
   
   .logo-card p {
     font-size: 16px;
     line-height: 1.5;
-    color: #666;
+    color: #fff;
   }
   
   /* Responsive Styling */

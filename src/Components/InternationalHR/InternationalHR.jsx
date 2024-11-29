@@ -1,8 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './InternationalHR.css';
+import AOS from 'aos'; // Import AOS
+import 'aos/dist/aos.css'; // Import AOS styles
 
 const InternationalHr = () => {
     const [result, setResult] = useState("");
+
+    // Initialize AOS
+    useEffect(() => {
+        AOS.init({ duration: 1000 }); // Optional: set the duration for animations
+    }, []);
 
     const onSubmit = async (event) => {
         event.preventDefault();
@@ -22,21 +29,26 @@ const InternationalHr = () => {
 
     return (
         <div className="international-hr-page">
-            <div className="programme-details">
-                <h2>International HR Management Programme</h2>
+            {/* Programme Details with Animation */}
+            <div className="programme-details" data-aos="fade-up">
+                <h2>International HR Management Program</h2>
                 <p>
-                    Equip yourself with advanced skills and global HR practices. This program is tailored to prepare
-                    professionals for international HR roles.
+                Step into the world of global HR with TCIC’s specialized International HR course. Designed to equip you with the skills and knowledge to excel in diverse and dynamic workplaces, ensuring you are prepared for the demands of an international career.
+
                 </p>
                 <ul>
-                    <li>Global Recruitment and Talent Acquisition</li>
-                    <li>Cross-Cultural Management</li>
+                    <li>Comprehensive training on Payroll, Recruitment, and Onboarding.</li>
+                    <li>Insights into Labor Laws and Employee Relations.
+                    </li>
                     <li>Employee Engagement Strategies</li>
-                    <li>Compensation and Benefits on a Global Scale</li>
-                    <li>HR Compliance and International Labor Laws</li>
+                    <li>Practical knowledge of Performance Appraisals and Talent Management.
+                    </li>
+                    <li>Guidance from industry experts and experienced trainers.</li>
                 </ul>
             </div>
-            <div className="programme-form">
+
+            {/* Application Form with Animation */}
+            <div className="programme-form" data-aos="fade-left" data-aos-delay="200">
                 <h3>Apply for International HR</h3>
                 <form onSubmit={onSubmit}>
                     <label>Full Name</label>
@@ -48,10 +60,10 @@ const InternationalHr = () => {
                     <label>Contact Number</label>
                     <input type="tel" name="phone" required placeholder="Enter your phone number" />
 
-                    <label>Select Programme</label>
+                    <label>Select Program</label>
                     <select name="programme" required>
-                    <option value="">Choose...</option>
-                    <option value="Full Stack Development">Full Stack Development</option>
+                        <option value="">Choose...</option>
+                        <option value="Full Stack Development">Full Stack Development</option>
                         <option value="Digital Marketing">Digital Marketing</option>
                         <option value="International HR">International HR</option>
                     </select>

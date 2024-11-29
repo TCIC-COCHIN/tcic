@@ -1,15 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Import AOS CSS
 import './FullStackDevelopment.css';
 
 const FullStackDevelopment = () => {
     const [result, setResult] = useState("");
+
+    useEffect(() => {
+        // Initialize AOS
+        AOS.init({
+            duration: 1000, // Animation duration
+            easing: 'ease-in-out', // Animation easing
+        });
+    }, []);
 
     const onSubmit = async (event) => {
         event.preventDefault();
         setResult("Submitting...");
         const formData = new FormData(event.target);
 
-        formData.append("access_key", "b87c59ad-9a7f-48e4-8044-50bfcddfa681"); // Replace with your actual key.
+        formData.append("access_key", "b87c59ad-9a7f-48e4-8044-50bfcddfa681");
 
         const response = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
@@ -30,7 +40,7 @@ const FullStackDevelopment = () => {
     return (
         <div className="fullstack-development-page">
             {/* Programme Details */}
-            <div className="programme-details">
+            <div className="programme-details" data-aos="fade-up">
                 <h2>Full Stack Development Programme</h2>
                 <p>
                     Become an expert in building web applications from scratch! Our Full Stack Development programme focuses on
@@ -45,7 +55,7 @@ const FullStackDevelopment = () => {
             </div>
 
             {/* Application Form */}
-            <div className="programme-form">
+            <div className="programme-form" data-aos="fade-up" data-aos-delay="200">
                 <h3>Apply for Full Stack Development</h3>
                 <form onSubmit={onSubmit}>
                     <label>Full Name</label>
@@ -59,13 +69,11 @@ const FullStackDevelopment = () => {
 
                     <label>Select Programme</label>
                     <select name="programme" required>
-                    <option value="">Choose...</option>
+                        <option value="">Choose...</option>
                         <option value="Full Stack Development">Full Stack Development</option>
                         <option value="Digital Marketing">Premium Digital Marketing </option>
                         <option value="International HR">International HR</option>
                     </select>
-
-                    
 
                     <button type="submit" className="btn dark-btn">
                         Submit

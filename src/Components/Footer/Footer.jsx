@@ -1,21 +1,33 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Footer.css'; // Import the CSS file
 import logo from '../../assets/images/logotrans.png';
 import { Link, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faLinkedin, faYoutube, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { Link as ScrollLink } from 'react-scroll';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Footer = () => {
   const location = useLocation();
 
+  useEffect(() => {
+    // Initialize AOS
+    AOS.init({
+      duration: 1000, // Animation duration in ms
+      offset: 100,    // Offset to trigger animations
+      once: false      // Animation happens only once
+    });
+  }, []);
+
   return (
     <footer className="footer">
       <div className="footer-container">
-        <div className="footer-left">
+        {/* Left Section */}
+        <div className="footer-left" data-aos="fade-right">
           <img src={logo} alt="Sreelakshmi Logo" className="logo" />
           <h4 className="company-name">
-            THIS IS YOUR MOMENT TO CONNECT, INNOVATE AND GROW INTO GREATNESS!
+            This is your Moment to Connect, Innovate and Grow into Greatness!
             <br />
             CST Brothers Provincial Campus,
             Sea port Airport Road,
@@ -25,7 +37,7 @@ const Footer = () => {
             <br />
             Thrikkakara, Kochi-682021
           </h4>
-          <p>Ph. no: 88485 46357</p>
+          <p>Ph. no: 9633760759</p>
           <p>Email: tcicinfocochin@gmail.com</p>
           <div className="social-icons">
             <a href="https://www.facebook.com/profile.php?id=61568197194224&mibextid=ZbWKwL" className="social-icon">
@@ -40,13 +52,14 @@ const Footer = () => {
             <a href="https://www.linkedin.com/company/105781546/" className="social-icon">
               <FontAwesomeIcon icon={faLinkedin} />
             </a>
-            <a href="https://wa.me/918848546357" className="social-icon">
+            <a href="https://wa.me/919633760759" className="social-icon">
               <FontAwesomeIcon icon={faWhatsapp} />
             </a>
           </div>
         </div>
 
-        <div className="footer-middle">
+        {/* Middle Section */}
+        <div className="footer-middle" data-aos="fade-up">
           <h3>QUICK LINKS</h3>
           <ul className="navbar">
             <li>
@@ -80,6 +93,9 @@ const Footer = () => {
               <Link to="/careers">Careers</Link>
             </li>
             <li>
+              <Link to="/event">Events</Link>
+            </li>
+            <li>
               {location.pathname === '/' ? (
                 <ScrollLink to="contact" smooth={true} offset={-260} duration={500}>
                   Contact Us
@@ -91,7 +107,8 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="footer-right">
+        {/* Right Section */}
+        <div className="footer-right" data-aos="fade-left">
           <h3>OUR SERVICES</h3>
           <ul>
             <li><Link to="/websiteService">Website Designing, Developing & Handling</Link></li>
@@ -107,7 +124,8 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="footer-bottom">
+      {/* Footer Bottom */}
+      <div className="footer-bottom" data-aos="zoom-in">
         <p>&copy; 2024 | Designed and Maintained by TCIC IT Wing</p>
       </div>
     </footer>

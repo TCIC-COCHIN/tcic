@@ -1,0 +1,27 @@
+.video-container {
+    position: relative;
+    width: 100%; /* Full width of the screen */
+    min-height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevent any overflow from the video */
+  }
+  
+  .responsive-video {
+    position: absolute; /* Ensure video fills the container */
+    top: 0;
+    left: 0;
+    width: 100%; /* Span the full width of the screen */
+    height: 100%; /* Span the full height of the container */
+    object-fit: cover; /* Ensures the video covers the container completely */
+    z-index: -1; /* Send video behind any content if needed */
+  }
+  
+  /* Optional text content styling for overlay (if required) */
+  .video-overlay-text {
+    position: relative;
+    z-index: 1; /* Bring text above the video */
+    color: #fff; /* Text color for visibility */
+    text-align: center;
+    padding: 20px;
+    font-size: 1.5rem;
+  }
+  

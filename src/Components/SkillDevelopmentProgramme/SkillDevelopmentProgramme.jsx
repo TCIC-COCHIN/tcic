@@ -1,8 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './SkillDevelopmentProgramme.css';
+import AOS from 'aos'; // Import AOS
+import 'aos/dist/aos.css'; // Import AOS styles
 
 const SkillDevelopmentProgramme = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
+
+  // Initialize AOS
+  useEffect(() => {
+    AOS.init({ duration: 1000 }); // Optional: set the duration for animations
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -11,8 +18,8 @@ const SkillDevelopmentProgramme = () => {
 
   return (
     <div className="skill-development-page">
-      {/* Programme Details */}
-      <div className="programme-details">
+      {/* Programme Details with Animation */}
+      <div className="programme-details" data-aos="fade-up">
         <h2>Skill Development Programme</h2>
         <p>
           Our Skill Development Programme is designed to enhance your abilities and prepare you
@@ -29,8 +36,8 @@ const SkillDevelopmentProgramme = () => {
         </ul>
       </div>
 
-      {/* Programme Form */}
-      <div className="programme-form">
+      {/* Programme Form with Animation */}
+      <div className="programme-form" data-aos="fade-left" data-aos-delay="200">
         <h3>Join the Programme</h3>
         <form onSubmit={handleSubmit}>
           <label htmlFor="name">Full Name</label>

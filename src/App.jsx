@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './Components/Navbar/Navbar';
 import Hero from './Components/Hero/Hero';
@@ -24,9 +24,24 @@ import ProfessionalITConsultants from './Components/ProfessionalITConsultants/Pr
 import DigitalMarketingService from './Components/DigitalMarketingService/DigitalMarketingService';
 import InternationalHr from './Components/InternationalHR/InternationalHr';
 import InnovativeLogoDesigning from './Components/InnovativeLogoDesigning/InnovativeLogoDesigning';
+import VideoPlayer from './Components/VideoPlayer/VideoPlayer';
+import Event from './Components/Events/Event';
+import TimeManagement from './Components/TimeManagement/TimeManagement';
+import StressHandling from './Components/StressHandling/StressHandling';
+import PowerfulLeader from './Components/PowerfulLeader/PowerfulLeader';
+import LeadershipSchools from './Components/LeadershipSchools/LeadershipSchools';
+import LeadershipColleges from './Components/LeadershipColleges/LeadershipColleges';
+import PositiveParenting from './Components/PositiveParenting/PositiveParenting';
+// import Animation from './Components/Animation/Animation';
+import HomeSkills from './Components/HomeSkills/HomeSkills';
+
 
 
 const App = () => {
+
+  const [playState, setPlayState]=useState(false)
+
+
   return (
     <Router>
       <Navbar />
@@ -38,17 +53,21 @@ const App = () => {
             <>
               <Hero id="hero" />
               <div className="container">
-                <About id="about" />
-                <Title subTitle="Our Programs" title="What we offer" />
+                <About setPlayState={setPlayState} id="about" />
+                <Title subTitle="Our Programs" title="Techno And Management Functions" />
                 <Programs id="programmes" />
+                <Title title="Skill Development Programs" />
+                <HomeSkills/>
                 <Title subTitle="Gallery" title="Campus Photos" />
                 <Campus id="campus" />
                 <Title subTitle="Testimonials" title="What Students Say" />
                 <Testimonials />
                 <Title subTitle="Contact Us" title="Get in Touch" />
                 <Contact id="contact" />
+                
               </div>
               <Footer />
+              <VideoPlayer playState={playState} setPlayState={setPlayState}/>
             </>
           }
         />
@@ -70,10 +89,18 @@ const App = () => {
         <Route path="/emailMarketing" element={<EmailMarketing/>} />
         <Route path="/itConsulting" element={<ProfessionalITConsultants/>} />
         <Route path="/digitalMarketingService" element={<DigitalMarketingService/>} />
+        <Route path="/event" element={<Event/>} />
+        <Route path="/time-management" element={<TimeManagement/>} />
+        <Route path="/stress-handling" element={<StressHandling/>} />
+        <Route path="/powerful-leader" element={<PowerfulLeader/>} />
+        <Route path="/leadership-schools" element={<LeadershipSchools/>} />
+        <Route path="/leadership-colleges" element={<LeadershipColleges/>} />
+        <Route path="/positive-parenting" element={<PositiveParenting/>} />
         
         
       </Routes>
     </Router>
+    
   );
 };
 

@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate for routing
 import './WebsiteService.css';
+import AOS from 'aos'; // Import AOS
+import 'aos/dist/aos.css'; // Import AOS styles
 
 const WebsiteService = () => {
   const navigate = useNavigate(); // Initialize navigate for routing
@@ -9,10 +11,15 @@ const WebsiteService = () => {
     navigate('/contact'); // Redirect to the contact form page
   };
 
+  // Initialize AOS
+  useEffect(() => {
+    AOS.init({ duration: 1000 }); // Optional: set the duration for animations
+  }, []);
+
   return (
     <div className="website-service-page">
       {/* Header Section */}
-      <header className="service-header">
+      <header className="service-header" data-aos="fade-down">
         <h1>Our Website Services</h1>
         <p>
           At TCIC, we specialize in creating and managing professional websites that help your business stand out.
@@ -22,7 +29,7 @@ const WebsiteService = () => {
 
       {/* Services Section */}
       <div className="service-details">
-        <div className="service-card">
+        <div className="service-card" data-aos="fade-up">
           <h2>Web Development</h2>
           <p>
             Build robust and scalable websites tailored to your business needs. Our web development service ensures
@@ -30,7 +37,7 @@ const WebsiteService = () => {
           </p>
         </div>
 
-        <div className="service-card">
+        <div className="service-card" data-aos="fade-up" data-aos-delay="200">
           <h2>Web Design</h2>
           <p>
             Design stunning websites that captivate your audience. Our expert designers focus on creating engaging,
@@ -38,7 +45,7 @@ const WebsiteService = () => {
           </p>
         </div>
 
-        <div className="service-card">
+        <div className="service-card" data-aos="fade-up" data-aos-delay="400">
           <h2>Website Management</h2>
           <p>
             We offer end-to-end website management solutions, including regular updates, maintenance, and security,
@@ -48,7 +55,7 @@ const WebsiteService = () => {
       </div>
 
       {/* Contact Us Button */}
-      <div className="contact-us-section">
+      <div className="contact-us-section" data-aos="zoom-in" data-aos-delay="600">
         <button className="contact-us-button" onClick={handleContactUsClick}>
           Contact Us
         </button>

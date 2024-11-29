@@ -1,71 +1,90 @@
 .hero {
-    width: 100%;
-    min-height: 100vh; /* Full viewport height */
-    background: url('../../assets/images/ban1.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px; /* General padding for spacing */
-  }
-  
-  .hero-text {
-    text-align: center;
-    max-width: 800px; /* Limit text width for readability */
-    padding: 0 20px; /* Padding for responsiveness */
-  }
-  
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 20px; /* General padding for spacing */
+  overflow: hidden; /* Ensure video stays contained */
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Place the video behind the text */
+}
+
+.background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the entire area */
+  position: absolute; /* Ensures video takes up full screen */
+  top: 0;
+  left: 0;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1; /* Bring text above the video */
+  text-align: center;
+  max-width: 800px; /* Limit text width for readability */
+  padding: 0 20px; /* Padding for responsiveness */
+}
+
+.hero-text h1 {
+  font-size: 60px; /* Large font size for desktop */
+  font-weight: 600;
+  margin-bottom: 20px; /* Add margin for spacing below heading */
+}
+
+.hero-text p {
+  max-width: 700px; /* Limit paragraph width */
+  margin: 0 auto 20px; /* Center text and add spacing */
+  line-height: 1.4; /* Improve readability */
+}
+
+/* Responsive Styles */
+
+/* Medium Screens (Tablets) */
+@media (max-width: 1024px) {
   .hero-text h1 {
-    font-size: 60px; /* Large font size for desktop */
-    font-weight: 600;
+    font-size: 20px; /* Slightly smaller font */
   }
-  
+
   .hero-text p {
-    max-width: 700px; /* Limit paragraph width */
-    margin: 10px auto 20px; /* Center text and add spacing */
-    line-height: 1.4; /* Improve readability */
+    font-size: 16px; /* Adjust paragraph font size */
   }
-  
-  /* Responsive Styles */
-  
-  /* Medium Screens (Tablets) */
-  @media (max-width: 1024px) {
-    .hero-text h1 {
-      font-size: 50px; /* Slightly smaller font */
-    }
-  
-    .hero-text p {
-      font-size: 16px; /* Adjust paragraph font size */
-    }
+}
+
+/* Small Screens (Mobile Devices) */
+@media (max-width: 768px) {
+  .hero {
+    padding: 30px 15px; /* Add padding for smaller screens */
   }
-  
-  /* Small Screens (Mobile Devices) */
-  @media (max-width: 768px) {
-    .hero {
-      padding: 30px 15px; /* Add padding for smaller screens */
-    }
-  
-    .hero-text h1 {
-      font-size: 40px; /* Further reduce font size */
-    }
-  
-    .hero-text p {
-      font-size: 14px; /* Smaller font for paragraphs */
-      line-height: 1.5; /* Adjust line height */
-    }
+
+  .hero-text h1 {
+    font-size: 40px; /* Further reduce font size */
   }
-  
-  /* Extra Small Screens (Very Small Devices) */
-  @media (max-width: 480px) {
-    .hero-text h1 {
-      font-size: 30px; /* Smaller font for very small screens */
-    }
-  
-    .hero-text p {
-      font-size: 13px; /* Smaller paragraph text */
-      line-height: 1.3; /* Compact text for better readability */
-    }
+
+  .hero-text p {
+    font-size: 14px; /* Smaller font for paragraphs */
+    line-height: 1.5; /* Adjust line height */
   }
-  
+}
+
+/* Extra Small Screens (Very Small Devices) */
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 30px; /* Smaller font for very small screens */
+  }
+
+  .hero-text p {
+    font-size: 13px; /* Smaller paragraph text */
+    line-height: 1.3; /* Compact text for better readability */
+  }
+}

@@ -7,6 +7,7 @@ import { Link, useLocation } from 'react-router-dom';
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false); // State for toggling menu
+  const [sidebarSubmenu, setSidebarSubmenu] = useState(null); // State to track open submenu
   const location = useLocation();
 
   useEffect(() => {
@@ -15,16 +16,23 @@ const Navbar = () => {
     });
   }, []);
 
+  const toggleSidebarSubmenu = (menu) => {
+    setSidebarSubmenu(sidebarSubmenu === menu ? null : menu);
+  };
+
   return (
-    <nav className={`container ${sticky ? 'dark-nav' : ''}`}>
+    <nav className={`navbar ${sticky ? 'dark-nav' : ''}`}>
       <img src={logo} alt="Logo" className="logo" />
+      
+      {/* Hamburger Menu Icon */}
       <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
         <span></span>
         <span></span>
         <span></span>
       </div>
-      <ul className={`navbar ${menuOpen ? 'active' : ''}`}>
-        {/* Home */}
+      
+      {/* Navbar Items for Desktop */}
+      <ul className={`navbar-items ${menuOpen ? 'hidden' : ''}`}>
         <li>
           {location.pathname === '/' ? (
             <ScrollLink to="hero" smooth={true} offset={0} duration={500}>
@@ -35,7 +43,6 @@ const Navbar = () => {
           )}
         </li>
 
-        {/* The Institute */}
         <li>
           {location.pathname === '/' ? (
             <ScrollLink to="about" smooth={true} offset={-260} duration={500}>
@@ -46,18 +53,37 @@ const Navbar = () => {
           )}
         </li>
 
-        {/* Programmes */}
-        <li className="dropdown">
-          Programmes
-          <ul className="dropdown-menu">
-            <li><Link to="/fullstack-development">Full Stack Development</Link></li>
-            <li><Link to="/digitalMarketing">Premium Digital Marketing (All in One)</Link></li>
-            <li><Link to="/internationalHr">International HR</Link></li>
-            <li><Link to="/skillDevelopment">Skill Development Programme</Link></li>
-          </ul>
-        </li>
+        {/* Programmes Dropdown */}
+        <li className={`dropdown ${sidebarSubmenu === 'programmes' ? 'active' : ''}`}>
+  <span onClick={() => toggleSidebarSubmenu('programmes')}>Programmes</span>
+  {sidebarSubmenu === 'programmes' && (
+    <ul className="dropdown-menu">
+      <li>
+        <Link to="/fullstack-development" onClick={() => setMenuOpen(false)}>
+          Full Stack Development
+        </Link>
+      </li>
+      <li>
+        <Link to="/digitalMarketing" onClick={() => setMenuOpen(false)}>
+          Premium Digital Marketing (All in One)
+        </Link>
+      </li>
+      <li>
+        <Link to="/internationalHr" onClick={() => setMenuOpen(false)}>
+          International HR
+        </Link>
+      </li>
+      <li>
+        <Link to="/skillDevelopment" onClick={() => setMenuOpen(false)}>
+          Skill Development Programme
+        </Link>
+      </li>
+      <li><Link to="/event">Events</Link></li>
 
-        {/* Gallery */}
+    </ul>
+  )}
+</li>
+
         <li>
           {location.pathname === '/' ? (
             <ScrollLink to="campus" smooth={true} offset={-260} duration={500}>
@@ -68,30 +94,44 @@ const Navbar = () => {
           )}
         </li>
 
-        {/* Services */}
-        <li className="dropdown">
-          Services
-          <ul className="dropdown-menu">
-            <li><Link to="/websiteService">Website Designing, Developing & Handling</Link></li>
-            <li><Link to="/posterDesigning">Creative Poster Designing</Link></li>
-            <li><Link to="/logoDesigning">Innovative Logo Designing</Link></li>
-            <li><Link to="/socialMediaPromotion">Social Media Promotion</Link></li>
-            <li><Link to="/seoPromotion">SEO Promotions</Link></li>
-            <li><Link to="/contentMarketing"> Informative Content Creation & Marketing</Link></li>
-            <li><Link to="/emailMarketing">Email Marketing</Link></li>
-            <li><Link to="/itConsulting">Professional IT Consultants</Link></li>
-            <li><Link to="/digitalMarketingService">Digital Marketing</Link></li>
-           
-            
-          </ul>
-        </li>
+        {/* Services Dropdown */}
+        <li className={`dropdown ${sidebarSubmenu === 'services' ? 'active' : ''}`}>
+  <span onClick={() => toggleSidebarSubmenu('services')}>Services</span>
+  {sidebarSubmenu === 'services' && (
+    <ul className="dropdown-menu">
+      <li>
+        <Link to="/websiteService" onClick={() => setMenuOpen(false)}>
+          Website Designing, Developing & Handling
+        </Link>
+      </li>
+      <li>
+        <Link to="/posterDesigning" onClick={() => setMenuOpen(false)}>
+          Creative Poster Designing
+        </Link>
+      </li>
+      <li>
+        <Link to="/logoDesigning" onClick={() => setMenuOpen(false)}>
+          Innovative Logo Designing
+        </Link>
+      </li>
+      <li>
+        <Link to="/socialMediaPromotion" onClick={() => setMenuOpen(false)}>
+          Social Media Promotion
+        </Link>
+      </li>
+      <li>
+        <Link to="/seoPromotion" onClick={() => setMenuOpen(false)}>
+          SEO Promotions
+        </Link>
+      </li>
+    </ul>
+  )}
+</li>
 
-        {/* Careers */}
         <li>
           <Link to="/careers">Careers</Link>
         </li>
 
-        {/* Contact Us */}
         <li>
           {location.pathname === '/' ? (
             <ScrollLink to="contact" smooth={true} offset={-260} duration={500}>
@@ -102,6 +142,62 @@ const Navbar = () => {
           )}
         </li>
       </ul>
+
+      {/* Sidebar Menu for Mobile */}
+      <div className={`sidebar ${menuOpen ? 'active' : ''}`}>
+        <ul>
+          <li>
+            <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
+          </li>
+          <li>
+            {location.pathname === '/' ? (
+              <ScrollLink to="about" smooth={true} offset={-260} duration={500} onClick={() => setMenuOpen(false)}>
+                The Institute
+              </ScrollLink>
+            ) : (
+              <Link to="/">The Institute</Link>
+            )}
+          </li>
+
+          {/* Programmes Dropdown */}
+          <li className={`dropdown ${sidebarSubmenu === 'programmes' ? 'active' : ''}`}>
+            <span onClick={() => toggleSidebarSubmenu('programmes')}>Programmes</span>
+            {sidebarSubmenu === 'programmes' && (
+              <ul className="dropdown-menu">
+                <li><Link to="/fullstack-development" onClick={() => setMenuOpen(false)}>Full Stack Development</Link></li>
+                <li><Link to="/digitalMarketing" onClick={() => setMenuOpen(false)}>Premium Digital Marketing (All in One)</Link></li>
+                <li><Link to="/internationalHr" onClick={() => setMenuOpen(false)}>International HR</Link></li>
+                <li><Link to="/skillDevelopment" onClick={() => setMenuOpen(false)}>Skill Development Programme</Link></li>
+                <li><Link to="/event"onClick={() => setMenuOpen(false)}>Events</Link></li>
+              </ul>
+            )}
+          </li>
+
+          {/* Services Dropdown */}
+          <li className={`dropdown ${sidebarSubmenu === 'services' ? 'active' : ''}`}>
+            <span onClick={() => toggleSidebarSubmenu('services')}>Services</span>
+            {sidebarSubmenu === 'services' && (
+              <ul className="dropdown-menu">
+                <li><Link to="/websiteService" onClick={() => setMenuOpen(false)}>Website Designing, Developing & Handling</Link></li>
+                <li><Link to="/posterDesigning" onClick={() => setMenuOpen(false)}>Creative Poster Designing</Link></li>
+                <li><Link to="/logoDesigning" onClick={() => setMenuOpen(false)}>Innovative Logo Designing</Link></li>
+                <li><Link to="/socialMediaPromotion" onClick={() => setMenuOpen(false)}>Social Media Promotion</Link></li>
+                <li><Link to="/seoPromotion" onClick={() => setMenuOpen(false)}>SEO Promotions</Link></li>
+              </ul>
+            )}
+          </li>
+
+          <li>
+            <Link to="/careers" onClick={() => setMenuOpen(false)}>Careers</Link>
+          </li>
+
+          <li>
+            <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link>
+          </li>
+
+          
+        </ul>
+      </div>
     </nav>
   );
 };

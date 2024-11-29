@@ -28,6 +28,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    cursor: pointer;
 }
 
 .about h3 {
@@ -118,4 +119,17 @@
     .play-icon {
         width: 40px; /* Even smaller play icon */
     }
+}
+
+.about-right {
+    flex-basis: 56%;
+    opacity: 0; /* Hide initially */
+    transform: translateX(100px); /* Initial position (off-screen) */
+    transition: all 0.8s ease-in-out; /* Smooth transition for animation */
+}
+
+/* Add a class for the animated state */
+.about-right.animate {
+    opacity: 1; /* Fully visible */
+    transform: translateX(0); /* Slide back to original position */
 }

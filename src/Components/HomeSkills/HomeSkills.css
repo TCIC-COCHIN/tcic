@@ -1,0 +1,100 @@
+.programs {
+    margin: 80px auto;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;  /* Allows wrapping of the program blocks */
+    justify-content: space-between;
+}
+
+.program {
+    flex-basis: 31%;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.program img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+.caption {
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 15, 152, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0;
+    padding-top: 70%;
+    transition: 0.4s;
+    z-index: 1; /* Ensure the caption is above the image */
+}
+
+.caption img {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+.program:hover .caption {
+    opacity: 1;
+    padding-top: 0;
+}
+
+/* For tablets and smaller screens */
+@media (max-width: 1024px) {
+    .program {
+        flex-basis: 48%; /* Each program block takes 48% width on tablets */
+    }
+
+    .program:hover .caption {
+        opacity: 1;  /* Ensure caption opacity is visible on hover */
+    }
+}
+
+/* For mobile screens */
+@media (max-width: 768px) {
+    .program {
+        flex-basis: 100%; /* Each program block takes full width on small screens */
+        margin-bottom: 20px;
+        position: relative; /* Reset any conflicting positioning */
+    }
+
+    .programs {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .caption {
+        padding-top: 50%; /* Adjust space for caption on small screens */
+    }
+
+    .caption img {
+        width: 50px; /* Adjust the size of the icon for smaller screens */
+    }
+
+    .caption p {
+        font-size: 14px; /* Reduce font size for better readability on smaller screens */
+    }
+
+    .program:hover .caption {
+        opacity: 1; /* Ensure caption opacity is visible on hover for small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .caption img {
+        width: 50px; /* Adjust the size of the icon for smaller screens */
+    }
+
+    .caption p {
+        font-size: 14px; /* Reduce font size for better readability on smaller screens */
+    }
+}

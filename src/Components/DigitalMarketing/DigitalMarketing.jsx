@@ -1,8 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './DigitalMarketing.css';
+import AOS from 'aos'; // Import AOS
+import 'aos/dist/aos.css'; // Import AOS styles
 
 const DigitalMarketing = () => {
     const [result, setResult] = useState("");
+
+    // Initialize AOS
+    useEffect(() => {
+        AOS.init({ duration: 1000 }); // Optional: set the duration for animations
+    }, []);
 
     const onSubmit = async (event) => {
         event.preventDefault();
@@ -30,7 +37,7 @@ const DigitalMarketing = () => {
     return (
         <div className="digital-marketing-page">
             {/* Programme Details */}
-            <div className="programme-details">
+            <div className="programme-details" data-aos="fade-up">
                 <h2>Digital Marketing Programme</h2>
                 <p>
                     Become a digital marketing expert with hands-on training in SEO, social media marketing, email marketing, and analytics. Our program equips you with the skills to run successful marketing campaigns in a competitive landscape.
@@ -44,7 +51,7 @@ const DigitalMarketing = () => {
             </div>
 
             {/* Application Form */}
-            <div className="programme-form">
+            <div className="programme-form" data-aos="fade-left" data-aos-delay="200">
                 <h3>Apply for Digital Marketing</h3>
                 <form onSubmit={onSubmit}>
                     <label>Full Name</label>
@@ -58,8 +65,8 @@ const DigitalMarketing = () => {
 
                     <label>Select Programme</label>
                     <select name="programme" required>
-                    <option value="">Choose...</option>
-                    <option value="Full Stack Development">Full Stack Development</option>
+                        <option value="">Choose...</option>
+                        <option value="Full Stack Development">Full Stack Development</option>
                         <option value="Digital Marketing">Premium Digital Marketing</option>
                         <option value="International HR">International HR</option>
                     </select>

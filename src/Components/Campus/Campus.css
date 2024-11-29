@@ -1,4 +1,3 @@
-/* General Styling */
 .campus {
     margin: 80px auto;
     width: 90%;
@@ -9,28 +8,42 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+    gap: 20px; /* Adds spacing between images */
     margin-bottom: 40px;
-    flex-wrap: wrap; /* Allow images to wrap when screen size is smaller */
 }
 
 .gallery img {
-    width: 23%;
-    border-radius: 10px;
-    margin-bottom: 20px; /* Adds spacing between images */
+    width: calc(23% - 20px); /* Subtract gap from the width to maintain layout */
+    border-radius: 10px; /* Rounded corners for the images */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover Effect */
+.gallery img:hover {
+    transform: scale(1.1); /* Slightly enlarge the image */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); /* Add a shadow around the image */
+    z-index: 1; /* Ensure the hovered image appears on top */
 }
 
 /* Responsive Design for Tablets (max-width: 1024px) */
 @media (max-width: 1024px) {
+    .gallery {
+        gap: 15px; /* Adjust gap for tablets */
+    }
     .gallery img {
-        width: 45%; /* Each image takes up 45% of the container width on tablets */
+        width: calc(45% - 15px); /* Subtract gap from width for better layout */
     }
 }
 
 /* Responsive Design for Mobile Screens (max-width: 768px) */
 @media (max-width: 768px) {
+    .gallery {
+        gap: 10px; /* Adjust gap for smaller screens */
+    }
     .gallery img {
-        width: 100%; /* Each image takes up 100% of the container width on mobile */
-        margin-bottom: 15px; /* Adjust spacing between images */
+        width: 100%; /* Images take full width on mobile */
+        margin-bottom: 15px; /* Adjust spacing for mobile */
     }
 
     .campus {

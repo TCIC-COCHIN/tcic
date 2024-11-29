@@ -1,0 +1,30 @@
+/* Container to hold the video */
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%; /* Ensure it doesn't exceed the container's width */
+    margin: 0 auto; /* Center the video */
+  }
+  
+  /* Make the video responsive */
+  .responsive-video {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  /* Desktop View - Video takes full width */
+  @media (min-width: 1024px) {
+    .responsive-video {
+      max-width: 100%;
+      height: auto; /* Ensures the aspect ratio remains intact */
+    }
+  }
+  
+  /* Mobile View - Adjust the width for smaller screens */
+  @media (max-width: 768px) {
+    .responsive-video {
+      width: 100%;
+      height: auto; /* Adjusts for mobile screens */
+    }
+  }
+  

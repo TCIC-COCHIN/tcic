@@ -1,17 +1,19 @@
 import React from 'react';
 import './Hero.css';
+import bannerVideo from '../../assets/images/banner.mp4';
 
 const Hero = () => {
   return (
     <div className="hero container">
+      <div className="video-background">
+        <video autoPlay loop muted className="background-video">
+          <source src={bannerVideo} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
       <div className="hero-text">
-        <h1>This is your Moment to Connect, Innovate and Grow</h1>
-        <p>
-          Start your journey with TCIC today, and take your career international! At TCIC, we
-          combine industry-led training with practical experience, ensuring our graduates are
-          well-prepared for their next career steps. Our expert instructors, interactive curriculum,
-          and supportive learning environment make us a top choice for learners worldwide.
-        </p>
+        <h1>This is your Moment to Connect, Innovate and Grow into Greatness</h1>
+       
       </div>
     </div>
   );

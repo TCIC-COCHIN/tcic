@@ -1,26 +1,56 @@
-import React from 'react'
-import './About.css'
-import about_img from '../../assets/images/about.png'
-import play_icon from '../../assets/images/play-icon.png'
+import React, { useEffect, useRef } from 'react';
+import './About.css';
+import about_img from '../../assets/images/vid.png';
+import play_icon from '../../assets/images/play-icon.png';
 
-const About = () => {
+const About = ({ setPlayState }) => {
+  const aboutRightRef = useRef(null); // Create a reference for the text div
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (aboutRightRef.current) {
+        const rect = aboutRightRef.current.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        // Check if the element is visible in the viewport
+        if (rect.top <= windowHeight && rect.bottom >= 0) {
+          aboutRightRef.current.classList.add('animate'); // Add animation class
+        } else {
+          aboutRightRef.current.classList.remove('animate'); // Remove animation class (optional)
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <div className='about'>
-<div className='about-left'>
-    
-    <img src={about_img} alt="" className='about-img' />
-    <img src={play_icon} alt="" className='play-icon' />
-</div>
-<div className='about-right'>
-  <h3>ABOUT TCIC</h3>  
-  <h2>This is your Moment to Connect, Innovate and Grow</h2>
-  <p>Our mission is to bridge the skill gap and prepare our learners for success in a competitive international job market. By providing hands-on, industry-relevant training, we equip our students with the expertise, confidence, and global perspective needed to thrive in their careers.</p>
-<p>To be a globally recognized center of excellence, fostering a new generation of professionals equipped with industry-relevant skills and an international perspective. We envision a world where TCIC alumni drive innovation, inspire growth, and lead in their fields, empowered by the comprehensive, cutting-edge training they receive with us.</p>
-<p>At TCIC, we combine industry-led training with practical experience, ensuring our graduates are well-prepared for their next career steps. Our expert instructors, interactive curriculum, and supportive learning environment make us a top choice for learners worldwide.
-Start your journey with TCIC today, and take your career international!</p>
-</div>
+    <div className="about">
+      <div className="about-left">
+        <img src={about_img} alt="" className="about-img" />
+        <img
+          src={play_icon}
+          alt=""
+          className="play-icon"
+          onClick={() => {
+            setPlayState(true);
+          }}
+        />
+      </div>
+      <div className="about-right" ref={aboutRightRef}>
+        <h3>ABOUT TCIC</h3>
+        <h2>This is your Moment to Connect, Innovate and Grow into Greatness</h2>
+        <p>
+        At TCIC, our mission is to empower professionals with industry-relevant skills and a global perspective, preparing them to excel in their careers and drive innovation worldwide. Our vision is to be a globally recognized center of excellence, fostering a new generation of leaders who inspire growth and lead with impact. Through cutting-edge training and practical experience, we equip our students to succeed in an ever-evolving world. Join us and turn your ambitions into achievements!
+        </p>
+        
+      
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;
