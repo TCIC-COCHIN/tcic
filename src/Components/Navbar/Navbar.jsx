@@ -55,7 +55,7 @@ const Navbar = () => {
 
         {/* Programmes Dropdown */}
         <li className={`dropdown ${sidebarSubmenu === 'programmes' ? 'active' : ''}`}>
-  <span onClick={() => toggleSidebarSubmenu('programmes')}>Program</span>
+  <span onClick={() => toggleSidebarSubmenu('programmes')}>Programs</span>
   {sidebarSubmenu === 'programmes' && (
     <ul className="dropdown-menu">
       <li>
@@ -200,7 +200,7 @@ const Navbar = () => {
           </li>
           <li><Link to="/event"onClick={() => setMenuOpen(false)}>Events</Link></li>
                 <li><Link to="/news" onClick={() => setMenuOpen(false)}>News</Link></li>
-                <Link to="/galleryview" onClick={() => setMenuOpen(false)}>Gallery</Link>
+              <li>  <Link to="/galleryview" onClick={() => setMenuOpen(false)}>Gallery</Link></li>
 
           <li>
             <Link to="/careers" onClick={() => setMenuOpen(false)}>Careers</Link>

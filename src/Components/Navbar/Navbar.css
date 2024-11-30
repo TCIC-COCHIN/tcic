@@ -131,6 +131,7 @@ nav ul li .dropdown-menu li:hover {
         height: 3px;
         background: #fff;
         margin: 5px 0;
+        left: 0;
     }
 
     .navbar-items.active {
@@ -147,16 +148,24 @@ nav ul li .dropdown-menu li:hover {
         display: none !important;
       }
 
-      /* Sidebar specific dropdown styles */
-.sidebar ul li.dropdown {
-    position: relative;
+     /* Sidebar specific dropdown styles */
+.sidebar ul li {
+    text-align: left; /* Ensure all items are left-aligned */
+    padding: 10px 15px; /* Add padding for consistent spacing */
   }
   
   .sidebar ul li.dropdown span {
     display: block;
     cursor: pointer;
-    padding: 10px 15px;
     color: #fff;
+    padding: 10px 15px; /* Match the padding with other menu items */
+  }
+  
+  .sidebar ul li a {
+    display: block; /* Ensures links span the full width */
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px; /* Same padding as dropdown items */
   }
   
   .sidebar ul li.dropdown .dropdown-menu {
@@ -170,22 +179,17 @@ nav ul li .dropdown-menu li:hover {
   }
   
   .sidebar ul li.dropdown.active .dropdown-menu {
-    display: block; /* Show submenu when active */
+    display: block; /* Show the dropdown when active */
   }
   
   .sidebar ul li.dropdown .dropdown-menu li {
     padding: 10px 15px;
     color: #fff;
     background: #270778;
-  }
-  
-  .sidebar ul li.dropdown .dropdown-menu li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 15px;
+    text-align: left; /* Align dropdown options with parent menu */
   }
   
   .sidebar ul li.dropdown .dropdown-menu li:hover {
-    background-color: #3b1181;
+    background-color: #3b1181; /* Highlight on hover */
   }
-}
+}  

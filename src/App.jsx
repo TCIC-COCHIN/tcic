@@ -55,13 +55,14 @@ const App = () => {
               <Hero id="hero" />
               <div className="container">
                 <About setPlayState={setPlayState} id="about" />
-                <Title subTitle="Our Programs" title="Techno And Management Functions" />
-                <Programs id="programmes" />
-                <Title title="Skill Development Programs" />
+                <Title subTitle="" title=" Skill Development Programs " />
                 <HomeSkills/>
-                <Title subTitle="Gallery" title="Campus Photos" />
+                
+                <Title title="Techno And Management Functions" />
+                <Programs id="programmes" />
+                <Title subTitle="" title="Gallery" />
                 <Campus id="campus" />
-                <Title subTitle="Testimonials" title="What Students Say" />
+                <Title subTitle="" title="Testimonials" />
                 <Testimonials />
                 <Title subTitle="Contact Us" title="Get in Touch" />
                 <Contact id="contact" />
