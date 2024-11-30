@@ -35,6 +35,10 @@ import PositiveParenting from './Components/PositiveParenting/PositiveParenting'
 // import Animation from './Components/Animation/Animation';
 import HomeSkills from './Components/HomeSkills/HomeSkills';
 import News from './Components/News/News';
+import SelfBranding from './Components/SelfBranding/SelfBranding';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
 
 
 
@@ -98,7 +102,9 @@ const App = () => {
         <Route path="/leadership-schools" element={<LeadershipSchools/>} />
         <Route path="/leadership-colleges" element={<LeadershipColleges/>} />
         <Route path="/positive-parenting" element={<PositiveParenting/>} />
+        <Route path="/selfBranding" element={<SelfBranding/>} />
         <Route path="/news" element={<News/>} />
+        
         
         
       </Routes>

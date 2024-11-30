@@ -1,0 +1,67 @@
+.self-branding-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .image-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between images */
+    flex-wrap: wrap; /* Wrap images if screen size is small */
+    margin-bottom: 30px; /* Space below the image row */
+  }
+  
+  .poster-container {
+    text-align: center;
+    max-width: 300px; /* Fixed width for images */
+  }
+  
+  .poster {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure proper scaling */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .button-container {
+    margin-top: 20px; /* Space between images and buttons */
+    display: flex;
+    flex-wrap: wrap; /* Adjust buttons to new rows for smaller screens */
+    gap: 15px; /* Space between the buttons */
+  }
+  
+  .contact-button,
+  .download-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #070e4b;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .contact-button:hover,
+  .download-button:hover {
+    background-color: #0056b3;
+  }
+  
+  @media (max-width: 768px) {
+    .image-row {
+      flex-direction: column; /* Stack images vertically on smaller screens */
+      align-items: center;
+    }
+  
+    .poster-container {
+      max-width: 100%; /* Allow full width on small screens */
+    }
+  }
+  
