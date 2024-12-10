@@ -16,6 +16,13 @@ import r10 from '../../assets/images/n15.jpg';
 import r11 from '../../assets/images/n16.jpg';
 import r12 from '../../assets/images/n17.jpg';
 import r13 from '../../assets/images/n18.jpg';
+import digis from '../../assets/images/digis.jpg';
+import schoolcare1 from '../../assets/images/schoolposter1.jpg';
+import schoolcare2 from '../../assets/images/schoolposter2.jpg';
+import schoolcare3 from '../../assets/images/schoolcare3.png';
+import schoolcare4 from '../../assets/images/schoolcare4.png';
+import mod1 from '../../assets/images/mod1.jpg';
+import mod2 from '../../assets/images/mod2.png';
 
 
 
@@ -33,7 +40,7 @@ const News = () => {
   return (
     <div>
       <div className="galleryview">
-        {[gal1, gal2, gal3, r4, gal5, gal6, r7,r2,r3,r5,r9,r8,r10,r11,r12,r13].map((image, index) => (
+        {[gal1, gal2, gal3, r4, gal5, gal6, r7,r2,r3,r5,r9,r8,r10,r11,r12,r13,digis,schoolcare1,schoolcare2,schoolcare3,schoolcare4,mod1,mod2].map((image, index) => (
           <div className="box" key={index} onClick={() => openModal(image)}>
             <img src={image} alt={`Gallery ${index + 1}`} />
           </div>

@@ -91,6 +91,12 @@ a {
   left: 0;
 }
 
+/* Dark Theme */
+body.dark-theme {
+  background-color: #1e1e1e; /* Dark background */
+  color: #f4f4f4; /* Light text color */
+}
+
 .btn.dark-btn span {
   position: relative;
   z-index: 1; /* Ensures the text is always above the hover effect */

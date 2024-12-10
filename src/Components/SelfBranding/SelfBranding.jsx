@@ -1,26 +1,44 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import JSZip from "jszip"; // For creating ZIP files
-import { saveAs } from "file-saver"; // For saving the ZIP file
+import React, { useState, useEffect } from "react";
+import { gsap } from "gsap";
+import { useNavigate } from "react-router-dom";
 import "./SelfBranding.css";
 import image1 from "../../assets/images/self1.jpg";
 import image2 from "../../assets/images/self2.jpg";
 import image3 from "../../assets/images/self3.jpg";
+import payImage from "../../assets/images/pay.jpg"; // Replace with your payment details image path
 
 const SelfBranding = () => {
-  // Function to download all images as a ZIP file
-  const handleDownloadAll = () => {
-    const zip = new JSZip();
-    const folder = zip.folder("SelfBrandingImages");
+  const [isPaymentModalOpen, setPaymentModalOpen] = useState(false);
+  const navigate = useNavigate();
 
-    folder.file("selfbranding1.png", fetch(image1).then(res => res.blob()));
-    folder.file("selfbranding2.png", fetch(image2).then(res => res.blob()));
-    folder.file("selfbranding3.png", fetch(image3).then(res => res.blob()));
+  useEffect(() => {
+    gsap.fromTo(
+      ".image-row",
+      { opacity: 0, y: -50 },
+      { opacity: 1, y: 0, duration: 1, ease: "power2.out" }
+    );
 
-    // Generate and save ZIP
-    zip.generateAsync({ type: "blob" }).then((content) => {
-      saveAs(content, "SelfBrandingImages.zip");
-    });
+    gsap.fromTo(
+      ".button-container",
+      { opacity: 0, y: 50 },
+      { opacity: 1, y: 0, duration: 1, delay: 0.5, ease: "power2.out" }
+    );
+  }, []);
+
+  const togglePaymentModal = () => {
+    setPaymentModalOpen(!isPaymentModalOpen);
+
+    if (!isPaymentModalOpen) {
+      gsap.fromTo(
+        ".modal-content",
+        { opacity: 0, scale: 0.9 },
+        { opacity: 1, scale: 1, duration: 0.3, ease: "power2.out" }
+      );
+    }
+  };
+
+  const handleContactClick = () => {
+    navigate("/contact");
   };
 
   return (
@@ -40,13 +58,29 @@ const SelfBranding = () => {
 
       {/* Button Section */}
       <div className="button-container">
-        <Link to="/contact" className="contact-button">
+        <button className="contact-button" onClick={handleContactClick}>
           Contact Us
-        </Link>
-        <button className="download-button" onClick={handleDownloadAll}>
-          Download All Images
+        </button>
+        <button className="payment-button" onClick={togglePaymentModal}>
+          Payment Details
         </button>
       </div>
+
+      {/* Payment Modal */}
+      {isPaymentModalOpen && (
+        <div className="modal-overlay" onClick={togglePaymentModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="close-modal" onClick={togglePaymentModal}>
+              ×
+            </button>
+            <img
+              src={payImage}
+              alt="Payment Details"
+              className="payment-details-image"
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };

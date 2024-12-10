@@ -1,0 +1,121 @@
+/* General Styling */
+.my-page {
+    width: 80%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #222222; /* Slightly lighter background for the page container */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  }
+  
+  /* Section Styling */
+  .section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 30px;
+  }
+  
+  .section-one .image-container,
+  .section-two .image-container,
+  .section-three .image-container,
+  .section-four .image-container {
+    flex: 1;
+  }
+  
+  .section-one .text-container,
+  .section-two .text-container,
+  .section-three .text-container,
+  .section-four .text-container {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .section-one .text-container h2,
+  .section-two .text-container h2,
+  .section-three .text-container h2,
+  .section-four .text-container h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #FFD700; /* Gold color for headings to make them stand out */
+    font-weight: bold;
+  }
+  
+  .text-container p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #cccccc; /* Light text color for paragraphs */
+    margin-bottom: 20px;
+  }
+  
+  /* Image Styling */
+  .image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Smooth zoom effect on hover */
+  }
+  .contact-us-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .contact-us-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: inline-block;
+  }
+  
+  .contact-us-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .image-container img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover for images */
+  }
+  
+  /* Text Container Specific Styling */
+  .text-container1 h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #d1b203; /* Gold color for the main heading */
+    text-align: center;
+  }
+  
+  /* Section-Specific Styles */
+  .section-three {
+    background-color: #2b2b2b; /* Slightly darker background for variation */
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .section-four {
+    background-color: #2e2e2e; /* Similar background for cohesion */
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .section {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .text-container {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+    .image-container img {
+      width: 80%; /* Adjust image size for smaller screens */
+      margin: 0 auto;
+    }
+  }
+  

@@ -20,7 +20,7 @@ const SkillDevelopmentProgramme = () => {
     <div className="skill-development-page">
       {/* Programme Details with Animation */}
       <div className="programme-details" data-aos="fade-up">
-        <h2>Skill Development Program</h2>
+        <h2>Skill Development Programme</h2>
         <p>
           Our Skill Development Program is designed to enhance your abilities and prepare you
           for a competitive job market. Learn industry-relevant skills from experienced mentors.
@@ -38,7 +38,7 @@ const SkillDevelopmentProgramme = () => {
 
       {/* Programme Form with Animation */}
       <div className="programme-form" data-aos="fade-left" data-aos-delay="200">
-        <h3>Join the Program</h3>
+        <h3>Join the Programme</h3>
         <form onSubmit={handleSubmit}>
           <label htmlFor="name">Full Name</label>
           <input type="text" id="name" placeholder="Enter your name" required />
@@ -49,7 +49,7 @@ const SkillDevelopmentProgramme = () => {
           <label htmlFor="contact">Contact Number</label>
           <input type="tel" id="contact" placeholder="Enter your contact number" required />
 
-          <label htmlFor="course">Select a Course</label>
+          <label htmlFor="course">Select Programme</label>
           <select id="course" required>
             <option value="">Choose...</option>
             <option value="soft-skills">Soft Skills</option>

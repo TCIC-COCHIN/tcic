@@ -55,7 +55,7 @@ const Navbar = () => {
 
         {/* Programmes Dropdown */}
         <li className={`dropdown ${sidebarSubmenu === 'programmes' ? 'active' : ''}`}>
-  <span onClick={() => toggleSidebarSubmenu('programmes')}>Programs</span>
+  <span onClick={() => toggleSidebarSubmenu('programmes')}>Programmes</span>
   {sidebarSubmenu === 'programmes' && (
     <ul className="dropdown-menu">
       <li>
@@ -65,7 +65,7 @@ const Navbar = () => {
       </li>
       <li>
         <Link to="/digitalMarketing" onClick={() => setMenuOpen(false)}>
-          Premium Digital Marketing
+          Strategic Digital Marketing
         </Link>
       </li>
       <li>
@@ -75,7 +75,7 @@ const Navbar = () => {
       </li>
       <li>
         <Link to="/skillDevelopment" onClick={() => setMenuOpen(false)}>
-          Skill Development Program
+          Skill Development Programme
         </Link>
       </li>
       <li><Link to="/event" onClick={() => setMenuOpen(false)}>Events</Link></li>
@@ -167,11 +167,11 @@ const Navbar = () => {
 
           {/* Programmes Dropdown */}
           <li className={`dropdown ${sidebarSubmenu === 'programmes' ? 'active' : ''}`}>
-            <span onClick={() => toggleSidebarSubmenu('programmes')}>Programs  ↓ </span>
+            <span onClick={() => toggleSidebarSubmenu('programmes')}>Programmes  ↓ </span>
             {sidebarSubmenu === 'programmes' && (
               <ul className="dropdown-menu">
                 <li><Link to="/fullstack-development" onClick={() => setMenuOpen(false)}>Full Stack Development</Link></li>
-                <li><Link to="/digitalMarketing" onClick={() => setMenuOpen(false)}>Premium Digital Marketing </Link></li>
+                <li><Link to="/digitalMarketing" onClick={() => setMenuOpen(false)}>Strategic Digital Marketing </Link></li>
                 <li><Link to="/internationalHr" onClick={() => setMenuOpen(false)}>International HR</Link></li>
                 <li><Link to="/skillDevelopment" onClick={() => setMenuOpen(false)}>Skill Development Programme</Link></li>
                 <li><Link to="/event"onClick={() => setMenuOpen(false)}>Events</Link></li>

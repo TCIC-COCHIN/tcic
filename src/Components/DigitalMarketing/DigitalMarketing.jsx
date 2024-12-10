@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'; 
 import './DigitalMarketing.css';
 import AOS from 'aos'; // Import AOS
 import 'aos/dist/aos.css'; // Import AOS styles
@@ -36,23 +36,29 @@ const DigitalMarketing = () => {
 
     return (
         <div className="digital-marketing-page">
-            {/* Programme Details */}
+            {/* Program Details */}
             <div className="programme-details" data-aos="fade-up">
-                <h2>Digital Marketing Program</h2>
+                <h2>Executive Certificate Programme in Strategic Digital Marketing</h2>
                 <p>
-                    Become a digital marketing expert with hands-on training in SEO, social media marketing, email marketing, and analytics. Our program equips you with the skills to run successful marketing campaigns in a competitive landscape.
+                    Master the art of strategic digital marketing with our comprehensive executive certificate programme. Gain expertise in diverse areas of marketing to build impactful campaigns and drive growth in today's digital-first world.
                 </p>
                 <ul>
-                    <li>Learn SEO techniques to improve website visibility.</li>
-                    <li>Master social media platforms like Facebook, Instagram, and LinkedIn.</li>
-                    <li>Understand the fundamentals of paid ad campaigns (Google Ads, Facebook Ads).</li>
-                    <li>Analyze marketing performance using Google Analytics and other tools.</li>
+                    <li>SEO (Search Engine Optimization)</li>
+                    <li>PPC (Pay-Per-Click Advertising)</li>
+                    <li>Content Marketing</li>
+                    <li>Social Media Marketing</li>
+                    <li>Email Marketing</li>
+                    <li>Influencer Marketing</li>
+                    <li>Affiliate Marketing</li>
+                    <li>Video Marketing</li>
+                    <li>Mobile Marketing</li>
+                    <li>Remarketing</li>
                 </ul>
             </div>
 
             {/* Application Form */}
             <div className="programme-form" data-aos="fade-left" data-aos-delay="200">
-                <h3>Apply for Digital Marketing</h3>
+                <h3>Apply for the Strategic Digital Marketing Programme</h3>
                 <form onSubmit={onSubmit}>
                     <label>Full Name</label>
                     <input type="text" name="name" placeholder="Enter your full name" required />
@@ -63,11 +69,13 @@ const DigitalMarketing = () => {
                     <label>Contact Number</label>
                     <input type="tel" name="phone" placeholder="Enter your contact number" required />
 
-                    <label>Select Program</label>
+                    <label>Select Programme</label>
                     <select name="programme" required>
                         <option value="">Choose...</option>
                         <option value="Full Stack Development">Full Stack Development</option>
-                        <option value="Digital Marketing">Premium Digital Marketing</option>
+                        <option value="Strategic Digital Marketing">
+                            Executive Certificate Programme in Strategic Digital Marketing
+                        </option>
                         <option value="International HR">International HR</option>
                     </select>
 

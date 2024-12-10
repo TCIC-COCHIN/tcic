@@ -38,6 +38,16 @@ import News from './Components/News/News';
 import SelfBranding from './Components/SelfBranding/SelfBranding';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import Internship from './Components/Internship/Internship';
+import FutureStrength from './Components/FutureStrength/FutureStrength';
+import SchoolCare from './Components/SchoolCare/SchoolCare';
+import SchoolCarePage from './Components/SchoolCarePage/SchoolCarePage';
+import Modelling from './Components/Modelling/Modelling';
+import ModellingGroomingPage from './Components/ModellingGroomingPage/ModellingGroomingPage';
+import KidsAfterSchool from './Components/KidsAfterSchool/KidsAfterSchool';
+
+
+
 
 
 
@@ -58,17 +68,24 @@ const App = () => {
             <>
               <Hero id="hero" />
               <div className="container">
-                <About setPlayState={setPlayState} id="about" />
-                <Title subTitle="" title=" Skill Development Programs " />
+           <KidsAfterSchool/>
+                <Title subTitle="" title=" Skill Development Programmes " />
                 <HomeSkills/>
                 
                 <Title title="Techno And Management Functions" />
                 <Programs id="programmes" />
+                <Title title="Hands on Training/Internship/Familiarization" />
+                <Internship/>
+                <Title title="Kids After School Care" />
+                <SchoolCare/>
+                <Title subTitle="" title="International Grooming and Modelling  " />
+                <Modelling/>
                 <Title subTitle="" title="Gallery" />
                 <Campus id="campus" />
                 <Title subTitle="" title="Testimonials" />
                 <Testimonials />
-                <Title subTitle="Contact Us" title="Get in Touch" />
+                <About setPlayState={setPlayState} id="about" />
+                <Title subTitle="" title="Get in Touch" />
                 <Contact id="contact" />
                 
               </div>
@@ -104,6 +121,10 @@ const App = () => {
         <Route path="/positive-parenting" element={<PositiveParenting/>} />
         <Route path="/selfBranding" element={<SelfBranding/>} />
         <Route path="/news" element={<News/>} />
+        <Route path="/futureStrength" element={<FutureStrength/>} />
+        <Route path="/studentCarePage" element={<SchoolCarePage/>} />
+        <Route path="/ModellingGroomingPage" element={<ModellingGroomingPage/>} />
+        
         
         
         

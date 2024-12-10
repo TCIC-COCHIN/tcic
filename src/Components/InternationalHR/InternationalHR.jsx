@@ -31,7 +31,7 @@ const InternationalHr = () => {
         <div className="international-hr-page">
             {/* Programme Details with Animation */}
             <div className="programme-details" data-aos="fade-up">
-                <h2>International HR Management Program</h2>
+                <h2>International HR Management Programme</h2>
                 <p>
                 Step into the world of global HR with TCIC’s specialized International HR course. Designed to equip you with the skills and knowledge to excel in diverse and dynamic workplaces, ensuring you are prepared for the demands of an international career.
 
@@ -60,7 +60,7 @@ const InternationalHr = () => {
                     <label>Contact Number</label>
                     <input type="tel" name="phone" required placeholder="Enter your phone number" />
 
-                    <label>Select Program</label>
+                    <label>Select Programme</label>
                     <select name="programme" required>
                         <option value="">Choose...</option>
                         <option value="Full Stack Development">Full Stack Development</option>

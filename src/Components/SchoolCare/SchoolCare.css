@@ -1,0 +1,103 @@
+.school-care-programs {
+    margin: 80px auto;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;  /* Allows wrapping of the program blocks */
+    justify-content: space-between;
+    justify-content: center; /* Center horizontally */
+    align-items: center;    /* Center vertically */
+  }
+  
+  .school-care-program {
+    flex-basis: 31%;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .school-care-program img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+  }
+  
+  .school-care-caption {
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 15, 152, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0;
+    padding-top: 70%;
+    transition: 0.4s;
+    z-index: 1; /* Ensure the caption is above the image */
+  }
+  
+  .school-care-caption img {
+    width: 60px;
+    margin-bottom: 10px;
+  }
+  
+  .school-care-program:hover .school-care-caption {
+    opacity: 1;
+    padding-top: 0;
+  }
+  
+  /* For tablets and smaller screens */
+  @media (max-width: 1024px) {
+    .school-care-program {
+        flex-basis: 48%; /* Each program block takes 48% width on tablets */
+    }
+  
+    .school-care-program:hover .school-care-caption {
+        opacity: 1;  /* Ensure caption opacity is visible on hover */
+    }
+  }
+  
+  /* For mobile screens */
+  @media (max-width: 768px) {
+    .school-care-program {
+        flex-basis: 100%; /* Each program block takes full width on small screens */
+        margin-bottom: 20px;
+        position: relative; /* Reset any conflicting positioning */
+    }
+  
+    .school-care-programs {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+  
+    .school-care-caption {
+        padding-top: 50%; /* Adjust space for caption on small screens */
+    }
+  
+    .school-care-caption img {
+        width: 50px; /* Adjust the size of the icon for smaller screens */
+    }
+  
+    .school-care-caption p {
+        font-size: 14px; /* Reduce font size for better readability on smaller screens */
+    }
+  
+    .school-care-program:hover .school-care-caption {
+        opacity: 1; /* Ensure caption opacity is visible on hover for small screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .school-care-caption img {
+        width: 50px; /* Adjust the size of the icon for smaller screens */
+    }
+  
+    .school-care-caption p {
+        font-size: 14px; /* Reduce font size for better readability on smaller screens */
+    }
+  }
+  
