@@ -1,27 +1,196 @@
-.no-jobs-container {
+.careers-container {
+    padding: 6rem 2rem; /* Adjust padding for smaller screens */
+    background-color: #f8f9fa;
+}
+
+.careers-title {
+    text-align: center;
+    font-size: 2rem; /* Slightly reduce font size for smaller screens */
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjust min-width for smaller screens */
+    gap: 2rem;
+    justify-items: center;
+}
+
+/* Careers.css */
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    max-height: 80%;
+}
+
+.close-modal-button {
+    margin-top: 20px;
+    background: #d9534f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Know More Button */
+.know-more-button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: center;
+}
+
+
+
+
+.job-card {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 350px; /* Adjust max-width for smaller screens */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.job-card-background {
+    position: relative;
+    height: 150px;
+    overflow: hidden;
+}
+
+.job-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.job-card-role-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
     text-align: center;
-    background-color: #f9f9f9;
-    color: #333;
-}
-
-.no-jobs-image {
-    width: 150px;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-.no-jobs-title {
-    font-size: 24px;
+    font-size: 1rem;
     font-weight: bold;
-    margin-bottom: 10px;
 }
 
-.no-jobs-text {
-    font-size: 16px;
-    color: #666;
+.job-card-content {
+    padding: 1.5rem;
+}
+
+.job-card-title {
+    font-size: 1.25rem;
+    color: #34495e;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.job-card-payScale {
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin-bottom: 1rem;
+}
+
+.job-card-skills-title {
+    font-size: 1rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.apply-button-link {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.job-card-subtitle {
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.job-card ul {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
+.job-card li {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+
+.apply-button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.apply-button:hover {
+    background-color: #2980b9;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .careers-container {
+        padding: 4rem 1rem; /* Reduce padding on smaller screens */
+    }
+
+    .careers-title {
+        font-size: 1.75rem; /* Adjust title font size */
+    }
+
+    .cards-container {
+        gap: 1.5rem; /* Reduce gap between cards */
+    }
+
+    .job-card {
+        max-width: 100%; /* Allow cards to take full width on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .careers-title {
+        font-size: 1.5rem; /* Further reduce title font size */
+    }
+
+    .apply-button {
+        font-size: 0.9rem; /* Adjust button font size */
+        padding: 0.6rem 1.2rem; /* Adjust button padding */
+    }
 }

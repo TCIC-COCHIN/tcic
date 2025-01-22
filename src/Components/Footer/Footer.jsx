@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './Footer.css'; // Import the CSS file
-import logo from '../../assets/images/logotrans.png';
+import logo from '../../assets/images/logfinal.png';
 import { Link, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faLinkedin, faYoutube, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
@@ -30,7 +30,7 @@ const Footer = () => {
             This is your Moment to Connect, Innovate and Grow into Greatness!
             <br />
             CST Brothers Provincial Campus,
-            Sea port Airport Road,
+            Seaport Airport Road,
             <br />
             Opp. Bharata Mata College,
             Near Chittilappilly Square,

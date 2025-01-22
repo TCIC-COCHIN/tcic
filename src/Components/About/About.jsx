@@ -44,8 +44,13 @@ const About = ({ setPlayState }) => {
         <h3>ABOUT TCIC</h3>
         <h2>This is your Moment to Connect, Innovate and Grow into Greatness</h2>
         
-        <p>At TCIC, we are committed to transforming your dreams into a successful reality.No matter your field of study, our expertly designed employability training program equips you with the skills, knowledge, and confidence to secure the perfect job that aligns with your passion and goals. With a placement , we ensure you don’t just dream of a better future—you achieve it. Join TCIC today and step confidently into a career that aligns perfectly with your passion and ambition!
-        This is the right time and TCIC is the right place for you</p>
+        <p>At TCIC, we are dedicated to transforming dreams into reality through expertly designed employability training programs that equip you with the skills, knowledge, and confidence to secure your dream job. We offer Skill Development Programmes, Techno and Management Functions, Hands-on Training/Internships, Kids After School Care, and International Grooming and Modelling to ensure holistic growth and global readiness. Additionally, our innovative approach introduces unique ideas and specialized programs tailored to meet evolving industry demands.
+        </p>
+
+        <p>TCIC Young Learners Academy specializes in appointing qualified teachers with certifications such as TESOL, CELTA, and TYLEC for international schools. The academy also offers after-school learning and care programs for children.
+
+</p>
+<p>With a strong placement focus, TCIC bridges the gap between learning and real-world success. Join us today and take the first step toward a brighter, more confident future!</p>
         
       
       </div>

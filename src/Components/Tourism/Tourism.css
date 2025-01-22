@@ -1,0 +1,106 @@
+.tourism-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #f0f8ff;
+  }
+  
+  .tourism-poster-container {
+    text-align: center;
+    max-width: 90%;
+    margin: 50px auto 0;
+  }
+  
+  .tourism-poster {
+    max-width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  }
+  
+  .tourism-button-container {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+  }
+  
+  /* Buttons */
+  .explore-button,
+  .details-button {
+    padding: 12px 28px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .explore-button {
+    background-color: #046307;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .explore-button:hover {
+    background-color: #038205;
+  }
+  
+  .details-button {
+    background-color: #034c76;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .details-button:hover {
+    background-color: #0263a1;
+  }
+  
+  /* Modal Overlay */
+  .tourism-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Modal Content */
+  .tourism-modal-content {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    z-index: 1001;
+  }
+  
+  .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .tourism-details-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+  }
+  

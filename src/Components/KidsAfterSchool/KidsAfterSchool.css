@@ -1,7 +1,7 @@
 /* KidsAfterSchool.css */
 .kids-afterschool-container {
     text-align: center;
-    background-color: #ed71bf;
+    /* background-color: #ed71bf; */
     padding: 20px;
     border-radius: 10px;
     max-width: 800px;
@@ -26,14 +26,14 @@
 
 .details {
     font-size: 1.2rem;
-    color: #555;
+    color: #060505;
     font-family: 'Verdana', sans-serif;
     margin-bottom: 20px;
     line-height: 1.6;
 }
 
 .navigate-button {
-    background-color: #4722da;
+    background-color: #0d0338;
     color: white;
     padding: 10px 20px;
     font-size: 1rem;

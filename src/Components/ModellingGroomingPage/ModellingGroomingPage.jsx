@@ -4,8 +4,12 @@ import 'aos/dist/aos.css';
 import './ModellingGroomingPage.css';
 import fitness_image from '../../assets/images/makeup1.jpg';
 import pose_image from '../../assets/images/pose.jpg';
+import { useNavigate } from 'react-router-dom';
+
 
 const ModellingGroomingPage = () => {
+  const navigate = useNavigate();
+
   useEffect(() => {
     // Add the dark theme class to the body
     document.body.classList.add('dark-theme');
@@ -20,7 +24,7 @@ const ModellingGroomingPage = () => {
   }, []);
 
   const navigateToContact = () => {
-    window.location.href = '/contact';
+    navigate('/contact');
   };
 
   return (

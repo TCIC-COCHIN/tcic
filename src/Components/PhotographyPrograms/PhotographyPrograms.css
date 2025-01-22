@@ -1,0 +1,88 @@
+.photography-programs {
+    margin: 100px auto;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+.photography-program {
+    flex-basis: 45%;
+    position: relative;
+    margin-bottom: 30px;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.photography-program img {
+    width: 100%;
+    display: block;
+    border-radius: 15px;
+}
+
+.photography-caption {
+    border-radius: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 123, 255, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    opacity: 0;
+    padding-top: 60%;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.photography-caption img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.photography-caption p {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.photography-program:hover .photography-caption {
+    opacity: 1;
+    padding-top: 0;
+}
+
+/* Tablet View Adjustments */
+@media (max-width: 1024px) {
+    .photography-program {
+        flex-basis: 48%;
+    }
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+    .photography-program {
+        flex-basis: 100%;
+    }
+
+    .photography-caption img {
+        width: 60px;
+    }
+
+    .photography-caption p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .photography-caption img {
+        width: 50px;
+    }
+
+    .photography-caption p {
+        font-size: 14px;
+    }
+}

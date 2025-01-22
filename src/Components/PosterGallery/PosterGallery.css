@@ -1,0 +1,98 @@
+.poster-gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+    position: relative;
+    min-height: 100vh; /* Ensures it takes the full viewport height */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+    box-sizing: border-box; /* Ensure padding doesn't add to size */
+  }
+  
+  .poster-containers {
+    width: 100%;
+    max-width: 80%; /* Adjust width */
+    max-height: 100vh; /* Ensure it fits vertically within viewport */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0; /* Remove default margins */
+  }
+  
+  .poster-containers img {
+    display: block; /* Ensure no extra space for inline elements */
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  .arrow-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #060748;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px; /* Reduce size on mobile */
+    height: 40px; /* Reduce size on mobile */
+    font-size: 18px; /* Adjust font size */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+  }
+  
+  .arrow-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .arrow-btn.left {
+    left: 10px; /* Adjust spacing for mobile */
+  }
+  
+  .arrow-btn.right {
+    right: 10px; /* Adjust spacing for mobile */
+  }
+  
+  /* Media Queries for Mobile View */
+  @media (max-width: 768px) {
+    .poster-containers {
+      max-width: 90%; /* Further adjust width for smaller devices */
+      max-height: 70vh; /* Ensure image doesn't overflow */
+    }
+  
+    .arrow-btn {
+      width: 35px; /* Further reduce button size */
+      height: 35px;
+      font-size: 16px;
+    }
+  
+    .arrow-btn.left {
+      left: 5px; /* Tighten spacing on mobile */
+    }
+  
+    .arrow-btn.right {
+      right: 5px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .poster-containers {
+      max-width: 95%; /* Almost full width for very small devices */
+      max-height: 60vh; /* Adjust height further */
+    }
+  
+    .arrow-btn {
+      width: 30px;
+      height: 30px;
+      font-size: 14px;
+    }
+  }
+  

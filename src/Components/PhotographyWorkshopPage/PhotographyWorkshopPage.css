@@ -1,0 +1,132 @@
+/* General Page Styling */
+.workshop-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-color: #121212; /* Dark background for sleek design */
+    color: #f4f4f4; /* Light text */
+    font-family: "Poppins", sans-serif;
+    padding: 40px 60px;
+    padding-top: 90px;
+    gap: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Left Section Styling */
+  .workshop-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  /* Card Styling */
+  .workshop-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .workshop-card h1{
+    color: #f4b400;
+    font-size: 3rem;
+  }
+  
+  .instructor-card {
+    margin-top: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+  .instructor-card h4{
+    color: #f4b400;
+    font-size: 1rem;
+  }
+  
+  /* Align Cards Side-by-Side */
+  .workshop-sections {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .workshop-sections h3{
+    color: #f4b400;
+    
+  }
+  
+  .workshop-card ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .workshop-card ul li {
+    font-size: 1.2rem;
+    margin: 12px 0;
+    display: flex;
+    align-items: flex-start; /* Align items to the top for multi-line text */
+    gap: 10px; /* Consistent spacing between the checkmark and text */
+    line-height: 1;
+    text-align: left; /* Align the text to the left */
+  }
+  
+  .workshop-card ul li::before {
+    content: "✔";
+    color: #06d6a0; /* Green checkmark */
+    font-size: 1rem;
+    margin-right: 10px; /* Consistent spacing between the checkmark and text */
+    flex-shrink: 0; /* Prevents the icon from resizing or shifting */
+    line-height: 0; /* Aligns the icon with the first line of text */
+    display: inline-block; /* Ensures proper alignment */
+  }
+  
+  
+  
+  
+  /* Button Styling */
+  .workshop-button-container {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .details-button {
+    background-color: #ffcb05; /* Bright Yellow Button */
+    color: #000;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    text-align: center;
+    line-height: 1.5;
+  }
+  
+  .details-button:hover {
+    background-color: #f4b400;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+  }
+  
+  /* Right Section Styling */
+  .workshop-right {
+    flex: 0.6;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .workshop-image {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    padding-top: 90px;
+  }
+  

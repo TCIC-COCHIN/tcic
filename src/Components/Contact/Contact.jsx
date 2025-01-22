@@ -61,7 +61,7 @@ const Contact = () => {
             <img src={location_icon} alt="" />
             Training Center for International Career
             <br />
-            CST Brothers Provincial Campus, Sea port Airport Road,
+            CST Brothers Provincial Campus, Seaport Airport Road,
             <br />
             opp. Bharata Mata College, Near Chittilappilly Square,
             <br />
